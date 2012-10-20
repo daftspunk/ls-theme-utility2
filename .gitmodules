@@ -1,3 +1,6 @@
 [submodule "resources/scss/frameworks"]
 	path = resources/scss/frameworks
 	url = git@github.com:responsiv/utility-core.git
+[submodule "resources/javascript/frameworks"]
+	path = resources/javascript/frameworks
+	url = git@github.com:responsiv/utility-js.git

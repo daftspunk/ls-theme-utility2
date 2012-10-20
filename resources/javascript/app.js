@@ -1,46 +1,15 @@
-/* This script contains different optional JavaScript effects
------------------------------------------------------------------------- */
+requirejs.config({
+    paths: {
+        vendor: '../vendor',
+        'utility/popup': 'utility/jquery.utility.popup'
+    }
+});
 
-function style_forms() {
+function init_effects() {
+    init_price_calculator();
     $.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
-}
-
-function init_quantity_controls() {
     $.utility.forms && $(document).forms('refresh');
     $('td.qty_controls input.input-quantity').change(update_product_price);
-}
-
-function init_carousel() {
- // jQuery(".carousel").jcarousel({
- //    scroll: 1,
- //    initCallback: function(carousel) {
- //        $('#carousel_next').bind('click', function() {
- //            carousel.next();
- //            return false;
- //        });
-
- //        $('#carousel_prev').bind('click', function() {
- //            carousel.prev();
- //            return false;
- //        });
- //    },
- //    itemVisibleInCallback: function(carousel, li, index, state) {
- //        $('#image_index').text(index);
- //        var cnt = $(li).parent().children('li').length;
-
- //        if (index == 1)
- //            $('#carousel_prev').addClass('disabled');
- //        else
- //            $('#carousel_prev').removeClass('disabled');
-            
- //        if (index == cnt)
- //            $('#carousel_next').addClass('disabled');
- //        else
- //            $('#carousel_next').removeClass('disabled');
- //    },
- //    buttonNextHTML: null,
- //    buttonPrevHTML: null
- // });
 }
 
 function get_extra_option_price(option) {
@@ -114,13 +83,6 @@ function init_rating_selector() {
 
 /* Page load handler
 ------------------------------------------------------------------------ */
-
-function init_effects() {
-    init_quantity_controls();
-    init_carousel();
-    init_price_calculator();
-    style_forms();
-}
 
 $(document).ready(function() {
     init_effects();

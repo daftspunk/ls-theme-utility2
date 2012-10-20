@@ -1,6 +1,6 @@
+<link href="<?= root_url('news/rss') ?>" type="application/rss+xml" rel="alternate" title="News" />
+<script data-main="<?=theme_resource_url('javascript/main')?>" src="<?=theme_resource_url('javascript/jquery.js')?>"></script>
 <?= $this->js_combine(array(
-    '@javascript/jquery.js', 
-    '@javascript/vendor/ui/jquery-ui.js', 
     'ls_core_jquery',
 
     '@javascript/app.js',
@@ -12,6 +12,9 @@
     '@javascript/foundation/jquery.foundation.alerts.js',
     '@javascript/foundation/jquery.placeholder.js',
     '@javascript/foundation/app.js',
+
+    '@vendor/ui/jquery-ui.js', 
+    '@vendor/carousel/js/jquery.jcarousel.js',
 
     '@javascript/utility/jquery.utility.statusbar.js',
     '@javascript/utility/jquery.utility.stars.js',
@@ -28,5 +31,3 @@
     '@css/pages.css',
     '@css/app.css',
 ), array('src_mode'=>true)) ?>
-
-<link href="<?= root_url('news/rss') ?>" type="application/rss+xml" rel="alternate" title="News" />

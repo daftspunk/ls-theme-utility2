@@ -5,10 +5,20 @@
 <? if ($images->count): ?>
     <div id="product_images" class="product_images">
         <? foreach ($product->images as $key=>$image): ?>
-            <a title="<?= h($image->title) ?>" class="gallery_image" rel="product_image" href="<?= $image->getThumbnailPath(500, 'auto') ?>"><img src="<?= $image->getThumbnailPath('auto', 'auto') ?>" alt="" /></a>
+            <!-- <a title="<?= h($image->title) ?>" class="gallery_image" rel="product_image" href="<?= $image->getThumbnailPath(500, 'auto') ?>"><img src="<?= $image->getThumbnailPath('auto', 'auto') ?>" alt="" /></a> -->
+            <img src="<?= $image->getThumbnailPath(500, 'auto') ?>" alt="" data-image-id="<?=$image->id?>" data-thumb-image="<?= $image->getThumbnailPath('auto', 'auto') ?>" />
         <? endforeach ?>
     </div>
     <script>
-        $(function(){ $('#product_images').orbit({timer:true, directionalNav:false, bullets:true}); })
+        // $(function(){ 
+        //     $('#product_images').orbit({timer:true, directionalNav:false, bullets:true}); 
+        // });
+    
+
+        require(['jquery', 'behaviors/portfolio'], function($, portfolio){
+
+            portfolio.call($('#product_images'));
+
+        });
     </script>
 <? endif ?>
