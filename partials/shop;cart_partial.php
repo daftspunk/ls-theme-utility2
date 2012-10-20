@@ -46,7 +46,7 @@
             <td <? if (!$bundle_item_product || $bundle_item_product->allow_manual_quantity): ?>class="right qty_controls"<? else: ?>class="right qty_shift"<? endif ?>>
               <? if (!$bundle_item_product || $bundle_item_product->allow_manual_quantity): ?>
                 <div>
-                  <input type="text" name="item_quantity[<?= $item->key ?>]" class="text" value="<?= $item->get_quantity() ?>" onkeydown="if ((event.keyCode ? event.keyCode : event.which) == 13) $(this).getForm().sendRequest('on_action', {onAfterUpdate: init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}})"/>
+                  <input type="text" name="item_quantity[<?= $item->key ?>]" class="text" value="<?= $item->get_quantity() ?>" onkeydown="if ((event.keyCode ? event.keyCode : event.which) == 13) $(this).getForm().sendRequest('on_action', {onAfterUpdate: Utility.page.init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}})"/>
                   <a href="#" class="arrow up">Up</a>
                   <a href="#" class="arrow down">Down</a>
                 </div>
@@ -66,7 +66,7 @@
             </td>
             <td class="qty_shift controls">
               <? if (!$bundle_item || !$bundle_item->is_required): ?>
-                <a href="#" onclick="return $(this).getForm().sendRequest('shop:on_deleteCartItem', {onAfterUpdate: init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}, confirm: 'Do you really want to remove this item from cart?', extraFields: {key: '<?= $item->key ?>'}})" class="delete_row" title="Remove">Remove</a>
+                <a href="#" onclick="return $(this).getForm().sendRequest('shop:on_deleteCartItem', {onAfterUpdate: Utility.page.init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}, confirm: 'Do you really want to remove this item from cart?', extraFields: {key: '<?= $item->key ?>'}})" class="delete_row" title="Remove">Remove</a>
               <? endif ?>
             </td>
           </tr>
@@ -104,9 +104,9 @@
 
     <div class="grid_8 omega clearfix offset_bottom align_right">
       <p class="coupon_label offset_right">Do you have a coupon?</p>
-      <input type="text" value="<?= h($coupon_code) ?>" placeholder="COUPON" class="text offset_right_2 button_height coupon" name="coupon" onkeydown="if ((event.keyCode ? event.keyCode : event.which) == 13) $(this).getForm().sendRequest('on_action', {onAfterUpdate: init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}})"/>
+      <input type="text" value="<?= h($coupon_code) ?>" placeholder="COUPON" class="text offset_right_2 button_height coupon" name="coupon" onkeydown="if ((event.keyCode ? event.keyCode : event.which) == 13) $(this).getForm().sendRequest('on_action', {onAfterUpdate: Utility.page.init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}})"/>
       
-      <a href="#" class="button_control offset_right" onclick="return $(this).getForm().sendRequest('on_action', {onAfterUpdate: init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}})">Apply changes</a>
+      <a href="#" class="button_control offset_right" onclick="return $(this).getForm().sendRequest('on_action', {onAfterUpdate: Utility.page.init_effects, update: {'cart_page': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}})">Apply changes</a>
       <a href="<?= root_url('/store/checkout-start') ?>" class="button_control" onclick="return $(this).getForm().sendRequest('shop:on_setCouponCode')">Check out</a>
       <input type="hidden" name="redirect" value="<?= root_url('/store/checkout-start') ?>"/>
     </div>

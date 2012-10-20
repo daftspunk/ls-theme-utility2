@@ -2,10 +2,16 @@
  * Portfolio behavior
  */
 
-define(['jquery', 'utility/popup'], function($){
+define([
+	'jquery', 
+	'widget',
+	'utility/popup', 
+	'foundation/orbit',
+	'foundation/reveal',
+	'vendor/carousel/js/jquery.jcarousel'
+	], function($){
 
-	return function(config) {
-		var element = $(this);
+	return function(element, config) {
 		var self = this;
 		self.element = element = $(element);
 
@@ -47,9 +53,7 @@ define(['jquery', 'utility/popup'], function($){
 		popup.after(thumb_list);
 
 		// Init thumbs
-		$(window).load(function() { 
-			thumb_list.jcarousel({scroll: 1});
-		});
+		setTimeout(function() { thumb_list.jcarousel({ scroll: 1 }); }, 500);
 
 		// If we have no images, do not proceed
 		if (!element.find('img').length)
@@ -84,7 +88,8 @@ define(['jquery', 'utility/popup'], function($){
 		// When a thumb is clicked
 		this.click_thumb = function(link) {
 			var image_id = $(link).attr('data-image-count');
-	    	element.trigger('orbit.goto', [image_id]);
+			if (image_id)
+	    		element.trigger('orbit.goto', [image_id]);
 		};
 
 		this.destroy = function() {

@@ -16,7 +16,7 @@
                 <select 
                     name="<?= $control_name ?>" 
                     class="expand" 
-                    onchange="return $(this).getForm().sendRequest('on_action', {onAfterUpdate: init_effects, update: {'product_page': 'shop:product_partial'}})">
+                    onchange="return $(this).getForm().sendRequest('on_action', {onAfterUpdate: Utility.page.init_effects, update: {'product_page': 'shop:product_partial'}})">
                     <?
                         $values = $option->list_values();
                     ?>

@@ -8,7 +8,7 @@
     <select 
         name="<?= Shop_BundleHelper::get_product_selector_name($item, $selected_item_product) ?>" 
         class="expand" 
-        onchange="$(this).getForm().sendRequest('on_action', {update: {'product_bundle_items': 'shop:bundle'}, onAfterUpdate: init_effects})">
+        onchange="$(this).getForm().sendRequest('on_action', {update: {'product_bundle_items': 'shop:bundle'}, onAfterUpdate: Utility.page.init_effects})">
         <? if (!$item->is_required): ?><option value="">&lt;please select&gt;</option><? endif ?>
         <? foreach ($item->item_products as $item_product): ?>
             <option value="<?= Shop_BundleHelper::get_product_selector_value($item_product) ?>" 

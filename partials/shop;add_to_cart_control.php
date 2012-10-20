@@ -19,7 +19,7 @@
             </td>
             <td>
                 <a href="#" class="button small radius" 
-                    onclick="return $(this).getForm().sendRequest('shop:on_addToCart', {onAfterUpdate: init_effects, 
+                    onclick="return $(this).getForm().sendRequest('shop:on_addToCart', {onAfterUpdate: Utility.page.init_effects, 
                         update: {'mini_cart': 'shop:mini_cart', 'product_page': 'shop:product_partial'}
                     })">
                     Add to cart

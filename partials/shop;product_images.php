@@ -10,15 +10,6 @@
         <? endforeach ?>
     </div>
     <script>
-        // $(function(){ 
-        //     $('#product_images').orbit({timer:true, directionalNav:false, bullets:true}); 
-        // });
-    
-
-        require(['jquery', 'behaviors/portfolio'], function($, portfolio){
-
-            portfolio.call($('#product_images'));
-
-        });
+        require(['behaviors/portfolio'], function(p){ p($('#product_images')); });
     </script>
 <? endif ?>
