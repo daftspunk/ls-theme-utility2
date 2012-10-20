@@ -2,7 +2,7 @@
     <? 
         $exclude = isset($exclude) ? $exclude : array();
     ?>
-    <table class="product_attributes">
+    <table class="table product_options">
         <? foreach ($product->options as $option): ?>
         <?
             if (in_array($option, $exclude)) continue;
@@ -11,9 +11,12 @@
             $posted_value = isset($posted_options[$option->option_key]) ? $posted_options[$option->option_key] : null;
         ?>
         <tr>
-            <th class="label"><?= h($option->name) ?>:</th>
+            <th><?= h($option->name) ?>:</th>
             <td>
-                <select name="<?= $control_name ?>" onchange="return $(this).getForm().sendRequest('on_action', {onAfterUpdate: init_effects, update: {'product_page': 'shop:product_partial'}})">
+                <select 
+                    name="<?= $control_name ?>" 
+                    class="expand" 
+                    onchange="return $(this).getForm().sendRequest('on_action', {onAfterUpdate: init_effects, update: {'product_page': 'shop:product_partial'}})">
                     <?
                         $values = $option->list_values();
                     ?>

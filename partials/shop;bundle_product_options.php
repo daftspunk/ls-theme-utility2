@@ -6,9 +6,10 @@
     <tr>
         <th><?= h($option->name) ?>:</th>
         <td>
-            <select name="<?= $control_name.'['.$option->option_key.']' ?>"
-                onchange="$(this).getForm().sendRequest('on_action', {update: {'product_bundle_items': 'shop:bundle'}, onAfterUpdate: init_effects})"
-            >
+            <select 
+                name="<?= $control_name.'['.$option->option_key.']' ?>"
+                class="expand" 
+                onchange="$(this).getForm().sendRequest('on_action', {update: {'product_bundle_items': 'shop:bundle'}, onAfterUpdate: init_effects})">
                 <?
                     $values = $option->list_values();
                     foreach ($values as $value):      

@@ -5,7 +5,9 @@
         $selected_item_product = Shop_BundleHelper::get_bundle_item_product_item($item);
         $selected_product = Shop_BundleHelper::get_bundle_item_product($item, $selected_item_product);  
     ?>
-    <select name="<?= Shop_BundleHelper::get_product_selector_name($item, $selected_item_product) ?>" 
+    <select 
+        name="<?= Shop_BundleHelper::get_product_selector_name($item, $selected_item_product) ?>" 
+        class="expand" 
         onchange="$(this).getForm().sendRequest('on_action', {update: {'product_bundle_items': 'shop:bundle'}, onAfterUpdate: init_effects})">
         <? if (!$item->is_required): ?><option value="">&lt;please select&gt;</option><? endif ?>
         <? foreach ($item->item_products as $item_product): ?>

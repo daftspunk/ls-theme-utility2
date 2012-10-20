@@ -15,7 +15,7 @@
             </div>
             <div class="nine columns end">  
                 <? if ($product && ($product->grouped_products->count || $product->options->count)): ?>
-                    <table class="product_attributes">
+                    <table class="bundle_product_options">
                         <? 
                             $this->render_partial('shop:bundle_product_options', array('product'=>$product, 'item'=>$item, 'item_product'=>$item_product));
                         ?>
