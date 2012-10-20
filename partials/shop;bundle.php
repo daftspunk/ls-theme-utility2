@@ -1,7 +1,7 @@
 <? if ($product->bundle_items->count): ?>
 
     <h5>Components</h5>
-    <table class="table table-striped custom bundle_items">
+    <table class="table table-striped bundle_items">
         <? foreach ($product->bundle_items as $item): ?>
             <tr>
                 <th class="item">

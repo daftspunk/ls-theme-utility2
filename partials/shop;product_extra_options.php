@@ -8,25 +8,25 @@
                     $is_checked = isset($posted_options[$option->option_key]);
                 ?>
                 <tr>
-                    <td>
-                        <input 
-                            name="<?= $control_name ?>" <?= checkbox_state($is_checked) ?> 
-                            id="extra_option_<?= $option->id ?>" 
-                            value="1" 
-                            type="checkbox" 
-                            class="extra_option_cb" />
-                        
+                    <th>
+                        <label for="extra_option_<?= $option->id ?>">
+                            <input 
+                                name="<?= $control_name ?>" <?= checkbox_state($is_checked) ?> 
+                                id="extra_option_<?= $option->id ?>" 
+                                value="1" 
+                                type="checkbox" 
+                                class="extra_option_cb" />
+                            
+                            <?= h($option->description) ?>:
+                            <? if ($option->price > 0): ?>
+                                <span class="price">+ <?= format_currency($option->get_price($product)) ?></span>
+                            <? else: ?>
+                                <span class="price">free</span>
+                            <? endif ?>
+                        </label>
+
                         <!-- This hidden is used by the optional JavaScript-based product price calculator -->
                         <input type="hidden" value="<?= $option->get_price($product) ?>" class="extra_option_price" />
-                    </td>
-                    <th>
-                        <label for="extra_option_<?= $option->id ?>"><?= h($option->description) ?>:</label>
-
-                        <? if ($option->price > 0): ?>
-                            <span class="price">+ <?= format_currency($option->get_price($product)) ?></span>
-                        <? else: ?>
-                            <span class="price">free</span>
-                        <? endif ?>
                     </th>
                 </tr>
             <? endforeach ?>

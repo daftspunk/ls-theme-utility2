@@ -28,6 +28,26 @@ table.fancy_selector tbody tr:hover a, table.fancy_selector tr.current a { text-
 table.fancy_selector .marker { position: absolute; height: 100%; width: 20px; top: 0; left: -20px; background: transparent url(../images/current_marker.png) no-repeat right 50%; }
 table.fancy_selector .marker, table.fancy_selector tr.current td, table.fancy_selector tr.current th, table.fancy_selector tbody tr:hover td, table.fancy_selector tbody tr:hover th { background-color: #2b3f6d; }
 
+.taj, .align_justify { text-align: justify; }
+
+.tac, .align_center { text-align: center; }
+
+.tal, .align_left { text-align: left; }
+
+.tar, .align_right { text-align: right; }
+
+.fl, .float_left { float: left; }
+
+.fr, .float_right { float: right; }
+
+.ttu, .uppercase { text-transform: uppercase; }
+
+.ttl, .lowercase { text-transform: lowercase; }
+
+.ttc, .capitalize { text-transform: capitalize; }
+
+.hidden { display: none; }
+
 /* -------------------------------------------------- 
 :: Components
 ----------------------------------------------------- */

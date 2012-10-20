@@ -29,7 +29,7 @@
 
         <?= flash_message() ?>
         
-        <?= open_form() ?>
+        <?= open_form(array('class'=>'custom')) ?>
             <div class="product_panel">
 
                 <!-- Product Long Description -->

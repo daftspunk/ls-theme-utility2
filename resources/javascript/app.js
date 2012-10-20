@@ -2,7 +2,7 @@
 ------------------------------------------------------------------------ */
 
 function style_forms() {
-    $.fn.foundationCustomForms && $(document).foundationCustomForms();
+    $.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
 }
 
 function init_quantity_controls() {
@@ -119,13 +119,13 @@ function init_effects() {
     init_quantity_controls();
     init_carousel();
     init_price_calculator();
+    style_forms();
 }
 
-$(document).ready(function(){
-    style_forms();
+$(document).ready(function() {
     init_effects();
 
-    $('.bundle_product_selector').live('click', function(event){
+    $('.bundle_product_selector').live('change', function(event){
         var parent = $(event.currentTarget).closest('li');
         if (event.currentTarget.checked) {
             parent.find('div.bundle_product_parameters').removeClass('hidden');
@@ -150,8 +150,7 @@ $(document).ready(function(){
      currency values
 ------------------------------------------------------------------------ */
 
-Number.prototype.formatNumber = function(c, d, t)
-{
+Number.prototype.formatNumber = function(c, d, t) {
     var n = this, c = isNaN(c = Math.abs(c)) ? 2 : c, 
     d = d == undefined ? "," : d, 
     t = t == undefined ? "." : t, 

@@ -42,4 +42,5 @@
             </tbody>
         </table>
     </div>
+    <input type="hidden" value="<?=$posted_value?>" name="<?= $control_name ?>"/>
 <? endif ?>
