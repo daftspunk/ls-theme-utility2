@@ -79,6 +79,7 @@
 
             <!-- Product Components -->
             <? if ($product->bundle_items->count): ?>
+                <h5>Components</h5>
                 <div class="bundle_items">
                     <div id="product_bundle_items"><? $this->render_partial('shop:bundle') ?></div>
                     <? $this->render_partial('shop:add_to_cart_control') ?>
@@ -88,6 +89,8 @@
         </form>
         
         <!-- Product Review -->
+        <hr />
+        <h4>Customer reviews</h4>
         <? $this->render_partial('shop:product_reviews') ?>
         <? $this->render_partial('shop:add_review_form') ?>  
 

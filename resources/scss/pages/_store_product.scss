@@ -1,11 +1,15 @@
 
 // This is an epic fix, certain areas contain empty characters 
 // whose line height manifests as whitespace
-.product_parameters, .bundle_product_parameters { line-height:0px;  }
+.product_parameters, .bundle_product_parameters { 
+    line-height:0px;  
+}
 
 #page_store_product {
-    
-    .fancy_product_option {  h5 { margin-top:0; }
+
+
+    .fancy_product_option {  
+        h5 { margin-top:0; }
         padding-left:1em; 
     }
     
@@ -86,8 +90,12 @@
         th { vertical-align: middle; }
         td div { margin-left: -3px; }  
     }
+
+    .review_list blockquote {
+        position: relative;
+        p.content { font-style: italic; margin-bottom:5px; }
+        h6 { margin: 5px 0; color: $loudColor; }
+        cite small { font-size:11px; font-style:normal; color:$grayLight; display:block; }
+        p.star-rating { position: absolute; right: 0; top: 2px; width: 90px; }    
+    }
 }
-
-
-  
-  

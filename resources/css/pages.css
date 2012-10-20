@@ -38,3 +38,8 @@
 #page_store_product table.product_extra_options label, #page_store_product table.bundle_product_extra_options label { color: #555555; display: inline-block; }
 #page_store_product table.product_extra_options th, #page_store_product table.bundle_product_extra_options th { vertical-align: middle; }
 #page_store_product table.product_extra_options td div, #page_store_product table.bundle_product_extra_options td div { margin-left: -3px; }
+#page_store_product .review_list blockquote { position: relative; }
+#page_store_product .review_list blockquote p.content { font-style: italic; margin-bottom: 5px; }
+#page_store_product .review_list blockquote h6 { margin: 5px 0; color: black; }
+#page_store_product .review_list blockquote cite small { font-size: 11px; font-style: normal; color: #bfbfbf; display: block; }
+#page_store_product .review_list blockquote p.star-rating { position: absolute; right: 0; top: 2px; width: 90px; }
