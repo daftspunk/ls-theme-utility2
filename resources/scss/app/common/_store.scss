@@ -17,6 +17,8 @@ span.on_sale {
 
 .add_to_cart_control {
     border-collapse: collapse;
+    border: none;
+    width: auto;
     td {
         vertical-align: middle;
         padding-right: 8px;
@@ -29,11 +31,16 @@ span.on_sale {
         padding-right: 11px;
     }
 
+    tbody td {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
     tfoot td {
         text-transform: uppercase;
-        color: #999999;
+        color: $gray;
         padding-top: 9px;
-        font-size: 11px;
+        font-size: 11px !important;
     }
     
     .product_price {
@@ -42,6 +49,7 @@ span.on_sale {
     
     .qty_controls div {
         margin-right: 10px;
+        margin-top: 10px;
     }
 }
 
@@ -116,5 +124,3 @@ table.fancy_selector {
 		background-color: #2b3f6d;
 	}    
 }
-
-

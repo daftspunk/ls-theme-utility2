@@ -10,14 +10,14 @@
         <? endif ?>
         <? $this->render_partial('shop:product_images') ?>
 
+        <!-- Product Attributes -->
+        <? $this->render_partial('shop:product_attributes') ?>
+
     </div>
     <div class="nine columns">
 
         <!-- Product Short Description -->
         <p class="lead"><?= h($product->short_description) ?></p>
-        
-        <!-- Product Attributes -->
-        <? $this->render_partial('shop:product_attributes') ?>
 
         <!-- Rating -->
         <? if ($product->rating_all): ?>
@@ -77,7 +77,7 @@
                 <? endif ?>
             </div>
 
-            <!-- Product Bundle Options-->
+            <!-- Product Components -->
             <? if ($product->bundle_items->count): ?>
                 <div class="bundle_items">
                     <div id="product_bundle_items"><? $this->render_partial('shop:bundle') ?></div>

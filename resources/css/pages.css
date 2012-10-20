@@ -10,5 +10,31 @@
 /* -------------------------------------------------- 
 :: Store Product
 ----------------------------------------------------- */
+.product_parameters, .bundle_product_parameters { line-height: 0px; }
+
 #page_store_product .fancy_product_option { padding-left: 1em; }
 #page_store_product .fancy_product_option h5 { margin-top: 0; }
+#page_store_product table.bundle_items { width: 100%; margin-bottom: 1em; }
+#page_store_product table.bundle_items th.item { width: 27%; font-weight: bold; color: #555555; padding: 10px; }
+#page_store_product table.bundle_items th.item p { font-weight: normal; font-size: 11px; margin: 5px 0 0 0; }
+#page_store_product table.bundle_items td.products { padding: 10px; vertical-align: top; }
+#page_store_product table.bundle_items .product_parameters { margin-top: 15px; }
+#page_store_product table.bundle_items td select { width: 100%; }
+#page_store_product table.bundle_items .product_attributes { margin-bottom: 0; }
+#page_store_product table.bundle_items .product_attributes select { width: 150px; }
+#page_store_product table.bundle_items .bundle_item_quantity_control { padding-bottom: 0 !important; }
+#page_store_product table.bundle_items .product_attributes + .bundle_item_quantity_control, #page_store_product table.bundle_items .extra_options + .bundle_item_quantity_control { margin-top: 0px; }
+#page_store_product table.bundle_items .add_to_cart_controls { margin-bottom: 0; }
+#page_store_product table.bundle_items li { margin-left: 0; list-style: none; }
+#page_store_product table.bundle_items li label { color: #555555; }
+#page_store_product table.bundle_items td.products > ul { margin-bottom: 0; }
+#page_store_product table.bundle_items td.products > ul > li { margin-bottom: 10px; }
+#page_store_product table.bundle_items td.products > ul > li:last-child { margin-bottom: 0; }
+#page_store_product table.product_attributes th, #page_store_product table.product_attributes td { font-size: 12px; }
+#page_store_product table.product_attributes th { color: black; text-align: right; }
+#page_store_product table.product_attributes td { color: #555555; }
+#page_store_product table.product_attributes .label { vertical-align: middle; }
+#page_store_product .extra_options table.product_attributes th, #page_store_product .extra_options table.product_attributes td, #page_store_product .extra_options table.product_attributes label { font-size: 12px; }
+#page_store_product .extra_options table.product_attributes label { color: #555555; display: inline-block; }
+#page_store_product .extra_options table.product_attributes th { vertical-align: middle; }
+#page_store_product .extra_options table.product_attributes td div { margin-left: -3px; }

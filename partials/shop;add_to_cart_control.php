@@ -1,8 +1,7 @@
 <?
     $posted_options = Shop_ProductHelper::get_default_options($product);    
 ?>
-
-<table class="add_to_cart_control">
+<table class="table add_to_cart_control">
     <tbody>
         <tr>
             <td>
@@ -14,9 +13,18 @@
             </td>
             <td class="x">x</td>
             <td class="qty_controls">
-                <input class="input-quantity" type="text" name="product_cart_quantity" value="<?= post('product_cart_quantity', 1) ?>" />
+                <div>
+                    <input class="input-quantity" type="text" name="product_cart_quantity" value="<?= post('product_cart_quantity', 1) ?>" />
+                </div>
             </td>
-            <td><a href="#" class="button radius" onclick="return $(this).getForm().sendRequest('shop:on_addToCart', {onAfterUpdate: init_effects, update: {'mini_cart': 'shop:mini_cart', 'product_page': 'shop:product_partial'}})">Add to cart</a></td>
+            <td>
+                <a href="#" class="button small radius" 
+                    onclick="return $(this).getForm().sendRequest('shop:on_addToCart', {onAfterUpdate: init_effects, 
+                        update: {'mini_cart': 'shop:mini_cart', 'product_page': 'shop:product_partial'}
+                    })">
+                    Add to cart
+                </a>
+            </td>
         </tr>
     </tbody>
     <tfoot>

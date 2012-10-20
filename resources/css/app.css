@@ -6,12 +6,13 @@ span.on_sale { display: block; width: 81px; height: 28px; text-indent: -10000px;
 .product_list h5 { margin-top: 0; }
 .product_list .star-rating { margin-bottom: 0; position: relative; top: -1em; }
 
-.add_to_cart_control { border-collapse: collapse; }
+.add_to_cart_control { border-collapse: collapse; border: none; width: auto; }
 .add_to_cart_control td { vertical-align: middle; padding-right: 8px; }
 .add_to_cart_control .x { color: #ccc; font-size: 19px; font-weight: bold; padding-right: 11px; }
-.add_to_cart_control tfoot td { text-transform: uppercase; color: #999999; padding-top: 9px; font-size: 11px; }
+.add_to_cart_control tbody td { padding-bottom: 0; padding-top: 0; }
+.add_to_cart_control tfoot td { text-transform: uppercase; color: gray; padding-top: 9px; font-size: 11px !important; }
 .add_to_cart_control .product_price { margin-right: 0; }
-.add_to_cart_control .qty_controls div { margin-right: 10px; }
+.add_to_cart_control .qty_controls div { margin-right: 10px; margin-top: 10px; }
 
 table.fancy_selector { border: none; border-collapse: collapse; width: 100%; font-size: 11px; }
 table.fancy_selector thead th { padding: 5px 10px; text-shadow: 0 1px 1px #fff; border-bottom: 3px solid #ccc; color: #2b3f6d; background: #c1cfef; border-bottom-color: #2b3f6d; }

@@ -1,6 +1,87 @@
+
+// This is an epic fix, certain areas contain empty characters 
+// whose line height manifests as whitespace
+.product_parameters, .bundle_product_parameters { line-height:0px;  }
+
 #page_store_product {
-	.fancy_product_option { 
-		h5 { margin-top:0; }
-		padding-left:1em; 
-	}
+    .fancy_product_option { 
+        h5 { margin-top:0; }
+        padding-left:1em; 
+    }
+
+
+    table.bundle_items {
+        width: 100%;
+        margin-bottom: 1em;
+
+        th.item {
+            width: 27%;
+            font-weight: bold;
+            color: $quietColor;
+            padding: 10px;
+            p {
+                font-weight: normal;
+                font-size: 11px;
+                margin: 5px 0 0 0;
+            }
+        }
+        
+
+        td.products {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        .product_parameters {
+            margin-top: 15px;
+        }
+
+        td select {
+            width: 100%;
+        }
+        
+        .product_attributes {
+            margin-bottom: 0;
+            select { width: 150px; }
+        }
+
+        .bundle_item_quantity_control { padding-bottom:0 !important; }
+        
+        .product_attributes + .bundle_item_quantity_control,
+        .extra_options + .bundle_item_quantity_control {
+            margin-top: 0px;
+        }
+
+        .add_to_cart_controls { margin-bottom: 0; }
+
+        li { 
+            margin-left: 0; list-style: none;
+            label { color: $quietColor; }
+        }
+        
+        td.products {
+            > ul { margin-bottom: 0; }
+            > ul > li { margin-bottom: 10px; }
+            > ul > li:last-child { margin-bottom: 0; }
+        }
+
+    }
+    
+    table.product_attributes {
+        th, td { font-size: 12px; }
+        th { color: $loudColor; text-align: right; }
+        td { color: $quietColor; }
+        .label { vertical-align: middle; }
+    }
+
+    .extra_options table.product_attributes {
+        th, td, label { font-size: 12px; }
+        label { color: $quietColor; display: inline-block; }
+        th { vertical-align: middle; }
+        td div { margin-left: -3px; }  
+    }
 }
+
+
+  
+  
