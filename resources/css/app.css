@@ -1,6 +1,8 @@
 /* -------------------------------------------------- 
 :: Common
 ----------------------------------------------------- */
+.original_price { text-decoration: line-through; }
+
 span.on_sale { display: block; width: 81px; height: 28px; text-indent: -10000px; position: absolute; top: 30px; left: -20px; z-index: 1000; background: transparent url(../images/on_sale_badge.png) no-repeat left top; }
 
 .product_list h5 { margin-top: 0; }

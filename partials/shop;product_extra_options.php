@@ -1,5 +1,5 @@
 <? if ($product->extra_options->count): ?>
-    <table class="product_extra_options">
+    <table class="table product_extra_options">
         <? foreach ($product->extra_options as $option): ?>
             <?
                 $control_name = 'product_extra_options['.$option->option_key.']';

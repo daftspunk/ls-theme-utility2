@@ -9,6 +9,7 @@
     '@javascript/foundation/modernizr.foundation.js',
     '@javascript/foundation/jquery.foundation.orbit.js',
     '@javascript/foundation/jquery.foundation.forms.js',
+    '@javascript/foundation/jquery.foundation.alerts.js',
     '@javascript/foundation/jquery.placeholder.js',
     '@javascript/foundation/app.js',
 

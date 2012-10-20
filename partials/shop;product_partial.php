@@ -52,7 +52,7 @@
                     $disabled = $product->om('disabled', $posted_options);
                 ?>
 
-                <!-- Product Options-->
+                <!-- Product Options and Extras -->
                 <? $this->render_partial('shop:product_options', array('exclude'=>array($fancy_option))) ?>
                 <? $this->render_partial('shop:product_extra_options') ?>
 

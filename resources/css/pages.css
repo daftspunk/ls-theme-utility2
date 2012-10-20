@@ -14,6 +14,7 @@
 
 #page_store_product .fancy_product_option { padding-left: 1em; }
 #page_store_product .fancy_product_option h5 { margin-top: 0; }
+#page_store_product table.bundle_product_options, #page_store_product table.bundle_product_extra_options, #page_store_product .bundle_item_quantity_control table { min-width: 200px; }
 #page_store_product table.bundle_items { width: 100%; margin-bottom: 1em; }
 #page_store_product table.bundle_items th.item { width: 27%; font-weight: bold; color: #555555; padding: 10px; }
 #page_store_product table.bundle_items th.item p { font-weight: normal; font-size: 11px; margin: 5px 0 0 0; }
@@ -33,7 +34,7 @@
 #page_store_product table.product_attributes th { color: black; text-align: left; }
 #page_store_product table.product_attributes td { color: #555555; }
 #page_store_product table.product_attributes label { vertical-align: middle; }
-#page_store_product table.bundle_product_options, #page_store_product table.bundle_product_extra_options, #page_store_product .bundle_item_quantity_control table { min-width: 200px; }
+#page_store_product table.product_options th { padding-top: 15px; }
 #page_store_product table.product_extra_options label, #page_store_product table.bundle_product_extra_options label { color: #555555; display: inline-block; }
 #page_store_product table.product_extra_options th, #page_store_product table.bundle_product_extra_options th { vertical-align: middle; }
 #page_store_product table.product_extra_options td div, #page_store_product table.bundle_product_extra_options td div { margin-left: -3px; }

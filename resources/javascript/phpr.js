@@ -15,3 +15,7 @@ Phpr.response.popupError = function() {
     var message = this.html.replace('@AJAX-ERROR@', '');
     $(document).statusbar('option', {context: 'error', time: 10000, message:message});
 };
+
+Phpr.options.extraFields = {
+	flash_partial: 'site:flash_message'
+};
