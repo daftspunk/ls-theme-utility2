@@ -12,6 +12,7 @@
 ----------------------------------------------------- */
 .product_parameters, .bundle_product_parameters { line-height: 0px; }
 
+#page_store_product .orbit-bullets { bottom: -42px; }
 #page_store_product .fancy_product_option { padding-left: 1em; }
 #page_store_product .fancy_product_option h5 { margin-top: 0; }
 #page_store_product table.bundle_product_options, #page_store_product table.bundle_product_extra_options, #page_store_product .bundle_item_quantity_control table { min-width: 200px; }
