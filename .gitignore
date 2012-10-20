@@ -1,0 +1,6 @@
+
+/sftp-config.json
+/logs/*.txt
+.sass-cache
+*.sublime-project
+*.sublime-workspace

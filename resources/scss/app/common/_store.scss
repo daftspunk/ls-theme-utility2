@@ -1,0 +1,120 @@
+span.on_sale {
+	display: block;
+	width: 81px;
+	height: 28px;
+	text-indent: -10000px;
+	position: absolute;
+	top: 30px;
+	left: -20px;
+	z-index: 1000;
+	background: transparent url(../images/on_sale_badge.png) no-repeat left top;
+}
+
+.product_list {
+	h5 { margin-top:0; }
+	.star-rating { margin-bottom:0; position:relative; top:-1em; }
+}
+
+.add_to_cart_control {
+    border-collapse: collapse;
+    td {
+        vertical-align: middle;
+        padding-right: 8px;
+    }
+
+    .x {
+        color: #ccc;
+        font-size: 19px;
+        font-weight: bold;
+        padding-right: 11px;
+    }
+
+    tfoot td {
+        text-transform: uppercase;
+        color: #999999;
+        padding-top: 9px;
+        font-size: 11px;
+    }
+    
+    .product_price {
+        margin-right: 0;
+    }
+    
+    .qty_controls div {
+        margin-right: 10px;
+    }
+}
+
+table.fancy_selector {
+    
+	// Reset
+    border:none; 
+    border-collapse: collapse;
+    width: 100%;
+
+    font-size: 11px;
+    thead {
+        th {
+            padding: 5px 10px;
+            text-shadow: 0 1px 1px #fff;
+            border-bottom: 3px solid #ccc;
+
+            // Colours
+			color: #2b3f6d;
+			background: #c1cfef;
+			border-bottom-color: #2b3f6d;            
+        }
+    }
+
+    tbody {
+    	// Reset standard table styles for a snug fit
+        th, td, a { 
+        	padding:0; 
+        	margin:0; 
+        	border:none;
+        	line-height: inherit;
+        }
+        a {
+            display: block;
+            text-shadow: 0 1px 1px #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        th a { color: #333; }
+        td a { color: #666; }
+    }
+
+    
+    th.first { @include border-top-left-radius(5px); }
+    th.last { @include border-top-right-radius(5px); }
+    tr.even { background-color: #ededed; }
+    .number { text-align: right; }
+
+    tbody tr:hover a,
+    tr.current a {
+        text-shadow: -1px -1px 1px rgba(0,0,0,0.1);
+        color: $white;
+    }
+
+    .marker {
+        position: absolute;
+        height: 100%;
+        width: 20px;
+        top: 0;
+        left: -20px;
+        background: transparent url(../images/current_marker.png) no-repeat right 50%;
+    }
+
+    // Colours
+	.marker,
+	tr.current td,
+	tr.current th,
+	tbody tr:hover td,
+	tbody tr:hover th {
+		background-color: #2b3f6d;
+	}    
+}
+
+
