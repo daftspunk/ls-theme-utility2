@@ -1,5 +1,5 @@
 <h5>News categories</h5>
-<ul class="category_list">
+<ul class="circle">
     <?
         $categories = Blog_Category::create()->find_all();
     ?>

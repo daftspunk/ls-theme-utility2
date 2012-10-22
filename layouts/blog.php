@@ -37,13 +37,15 @@
         <div class="container" id="content">
             <div class="row">
                 <div class="nine columns">
-                    <div class="page_header">
-                        <h1><?= h($this->page->title) ?></h1>
+                    <div class="separator right">
+                        <div class="page_header">
+                            <h1><?= h($this->page->title) ?></h1>
+                        </div>
+                        <div class="page_breadcrumb">
+                             <? $this->render_partial('site:breadcrumb') ?>
+                        </div>
+                        <? $this->render_page() ?>
                     </div>
-                    <div class="page_breadcrumb">
-                         <? $this->render_partial('site:breadcrumb') ?>
-                    </div>
-                    <? $this->render_page() ?>
                 </div>
                 <div class="three columns">
                     <? $this->render_partial('blog:sidebar') ?>
@@ -51,9 +53,9 @@
             </div>
         </div>
         <div id="footer">
-                <footer>
-                    <?=$this->render_partial('site:footer')?>
-                </footer>
+            <footer>
+                <?=$this->render_partial('site:footer')?>
+            </footer>
         </div>
     </body>
 </html>

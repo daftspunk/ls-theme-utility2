@@ -8,7 +8,7 @@
 ?>
     <?= open_form() ?>
         <input type="hidden" name="redirect" value="<?= root_url('/store/checkout-start') ?>" />
-        <table class="table product_table">
+        <table class="table order_table">
             <thead>
                 <tr>
                     <th class="item">Product</th>

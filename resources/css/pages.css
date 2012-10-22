@@ -48,18 +48,6 @@
 /* -------------------------------------------------- 
 :: Store Cart
 ----------------------------------------------------- */
-#page_store_cart .product_table .align_right { text-align: right !important; }
-#page_store_cart .product_table th.item { width: 60%; }
-#page_store_cart .product_table th.controls { width: 1%; }
-#page_store_cart .product_table tbody td img.product_image { margin-right: 1em; }
-#page_store_cart .product_table tbody td div.bundle_item { padding-left: 30px; }
-#page_store_cart .product_table tbody tr.bundle_totals { background: #e6e6e6; }
-#page_store_cart .product_table tbody tr.bundle_totals td { font-weight: bold; }
-#page_store_cart .product_table tfoot tr { border-bottom: 1px solid #e6e6e6; }
-#page_store_cart .product_table tfoot th { padding-top: 2em; padding-bottom: 2em; }
-#page_store_cart .product_table tfoot div.cart_subtotal_label { text-transform: uppercase; font-size: 12px; }
-#page_store_cart .product_table tfoot div.cart_subtotal { font-size: 19px; }
-
 /* -------------------------------------------------- 
 :: Store Checkout
 ----------------------------------------------------- */

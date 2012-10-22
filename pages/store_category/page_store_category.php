@@ -2,7 +2,6 @@
     <div class="page_header">
         <h2><?= h($this->page->title) ?></h2>
     </div>
-
     <? if ($category): ?>
         <?
             $subcategories = $category->list_children('front_end_sort_order');
