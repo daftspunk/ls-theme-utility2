@@ -1,4 +1,9 @@
 
+function refresh_custom_forms() {
+	$.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
+	//$('form.custom select').trigger('change');
+}
+
 /* Extend the Number class with the formatNumber method for formatting 
      currency values
 ------------------------------------------------------------------------ */

@@ -45,7 +45,7 @@
                 <? endif ?>
 
                 <!-- Learn more -->
-                <p><a href="<?= $product->page_url('store/product') ?>" class="link_button">
+                <p><a href="<?= $product->page_url('store/product') ?>" class="link_button round">
                     Learn more about <?= h($product->name) ?>
                 </a></p>
             </li>

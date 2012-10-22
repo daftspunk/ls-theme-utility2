@@ -32,7 +32,7 @@ var Utility = (function(util, $){
             $('#product_images').portfolio('destroy');
             $('#product_images').portfolio({ thumb_mode: 'orbit' });
             page.init_price_calculator();
-            $.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
+            refresh_custom_forms();
             $.utility.forms && $(document).forms() && $(document).forms('refresh');
             $('td.qty_controls input.input-quantity').change(page.update_product_price);
         }

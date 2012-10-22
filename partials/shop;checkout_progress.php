@@ -30,6 +30,7 @@
                     <a href="#" 
                         onclick="return $(this).getForm().sendRequest('on_action', {
                             update:{'p_checkout_partial': 'shop:checkout_partial'}, 
+                            onAfterUpdate: refresh_custom_forms, 
                             extraFields: {'move_to': '<?= $step ?>'}})">
                         <?= h($name) ?>
                     </a>

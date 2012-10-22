@@ -35,8 +35,16 @@
                                 <? if ($is_current): ?><span class="marker">&nbsp;</span><? endif ?>
                             </a>
                         </th>
-                        <td class="number"><a onclick="<?= $click_handler ?>" href="#"><?= format_currency($product->om('price', $posted_options)) ?></a></td>
-                        <td class="number"><a onclick="<?= $click_handler ?>" href="#"><?= $product->om('in_stock', $posted_options) ?></a></td>
+                        <td class="number">
+                            <a onclick="<?= $click_handler ?>" href="javascript:;">
+                                &nbsp;<?= format_currency($product->om('price', $posted_options)) ?>
+                            </a>
+                        </td>
+                        <td class="number">
+                            <a onclick="<?= $click_handler ?>" href="javascript:;">
+                                &nbsp;<?= $product->om('in_stock', $posted_options) ?>
+                            </a>
+                        </td>
                     </tr>
                 <? endforeach ?>
             </tbody>

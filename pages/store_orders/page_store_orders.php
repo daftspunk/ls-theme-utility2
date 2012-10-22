@@ -5,7 +5,7 @@
     <? if (!$orders || !$orders->count): ?>
         <p>Orders not found</p>
         <p>
-            <a class="link_button" href="<?= root_url('store')?>">Continue shopping</a>
+            <a class="link_button round" href="<?= root_url('store')?>">Continue shopping</a>
         </p>
     <? else: ?>
         <table class="table table-hover">

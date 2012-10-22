@@ -1,5 +1,5 @@
 <p id="estimator_trigger">
-    <a href="#" class="link_button" onclick="$('#estimator_trigger').addClass('hidden'); 
+    <a href="#" class="link_button round" onclick="$('#estimator_trigger').addClass('hidden'); 
         $('#estimator_form').removeClass('hidden'); 
         return false">
         Estimate shipping cost
@@ -12,10 +12,13 @@
             <p>
                 <select id="country" name="country" onchange="return $('#country').getForm().sendRequest(
                     'shop:on_updateStateList', {      
-                    extraFields: {'country': $('country').get('value'),
-                    'control_name': 'state',
-                    'control_id': 'state',
-                    'current_state': '<?= $shipping_info->state ?>'},
+                    extraFields: {
+                        'country': $('country').get('value'),
+                        'control_name': 'state',
+                        'control_id': 'state',
+                        'current_state': '<?= $shipping_info->state ?>'
+                    },
+                    onAfterUpdate: refresh_custom_forms,
                     update: {'shipping_states': 'shop:state_selector'}
                 })">
                     <? foreach ($countries as $country): ?>
@@ -33,7 +36,10 @@
             <input type="text" placeholder="ZIP" class="text button_height" name="zip" value="<?= h($shipping_info->zip) ?>"/>
         </div>
         <div class="six columns">
-            <a href="#" class="secondary small button radius" onclick="return $(this).getForm().sendRequest('shop:on_evalShippingRate', {update: {'shipping_options': 'shop:shipping_estimator_options'}})">OK</a>
+            <a href="javascript:;" class="secondary small button radius" 
+                onclick="return $(this).getForm().sendRequest('shop:on_evalShippingRate', {
+                    update: {'shipping_options': 'shop:shipping_estimator_options'}
+                })">OK</a>
         </div>
     </div>
     

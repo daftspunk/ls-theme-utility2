@@ -1,7 +1,7 @@
 <h3>Shipping Information</h3>
 <p class="lead">Please enter your shipping name and address</p>
 
-<p><a href="javascript:;" class="link_button" 
+<p><a href="javascript:;" class="link_button round" 
     onclick="return $(this).getForm().sendRequest('shop:on_copyBillingInfo', {update:{'p_checkout_partial': 'shop:checkout_partial'}})">
     <i class="icon-copy"></i> Copy billing information</a>
 <p>
@@ -41,14 +41,13 @@
         <input autocomplete="off" id="zip" type="text" class="text" name="zip" value="<?= h($shipping_info->zip) ?>"/>
     </div>
 </div>
-
-
  
 <div class="row">
     <div class="six columns">
         <label for="country">Country</label>
         <select autocomplete="off" id="country" name="country" onchange="return $('#country').getForm().sendRequest('shop:on_updateStateList', {
                 extraFields: {'country': $('#country').val(), 'control_name': 'state', 'control_id': 'state', 'current_state': '<?= $shipping_info->state ?>'},
+                onAfterUpdate: refresh_custom_forms,
                 update: {'shipping_states': 'shop:state_selector'}
             })">
             <? foreach ($countries as $country): ?>

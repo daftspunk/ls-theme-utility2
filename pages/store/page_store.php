@@ -18,7 +18,7 @@
                     <div class="ten columns">
                         <h4><a href="<?= $root_category->page_url('store/category') ?>"><?= h($root_category->name) ?></a></h4>
                         <? foreach ($subcategories as $subcategory):  ?>
-                            <a class="link_button" href="<?= $subcategory->page_url('store/category') ?>"><?= h($subcategory->name) ?></a>
+                            <a class="link_button round" href="<?= $subcategory->page_url('store/category') ?>"><?= h($subcategory->name) ?></a>
                         <? endforeach ?>
                     </div>
                 </div>

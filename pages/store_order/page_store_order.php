@@ -1,7 +1,7 @@
 <div id="page_store_order">
     <? if (!$order): ?>
         <p>Order not found</p>
-        <p><a class="link_button" href="<?= root_url('store')?>">Continue shopping</a></p>
+        <p><a class="link_button round" href="<?= root_url('store')?>">Continue shopping</a></p>
     <? else: ?>
         <div class="page_header">
             <h2>Order # <?= $order->id ?></h2>
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="six columns">
                 <p>
-                    <a class="link_button" href="<?= root_url('store/orders') ?>">Return to the order list</a>
+                    <a class="link_button round" href="<?= root_url('store/orders') ?>">Return to the order list</a>
                 </p>
             </div>
             <div class="three columns offset-by-three">

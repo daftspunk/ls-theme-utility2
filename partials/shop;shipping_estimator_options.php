@@ -1,7 +1,7 @@
 <div class="shipping_options">
     <? if (isset($shipping_options)): ?>
         <? if (count($shipping_options)): ?>
-            <table>
+            <table class="table">
                 <? foreach ($shipping_options as $option): ?>
                     <? if ($option->multi_option): ?>
                         <? foreach ($option->sub_options as $sub_option): ?>
@@ -13,7 +13,7 @@
                     <? else: ?>
                         <tr class="<?= zebra('shipping_options') ?>">
                             <td><?= h($option->name) ?></td>
-                            <td class="align_right"><?= !$option->is_free ? format_currency($option->quote) : 'free' ?></td>
+                            <th class="align_right"><?= !$option->is_free ? format_currency($option->quote) : 'free' ?></th>
                         </tr>
                     <? endif ?>
                 <? endforeach ?>

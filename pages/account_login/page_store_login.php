@@ -38,7 +38,7 @@
         <? else: ?>
             <h3>Thank you!</h3>
             <p>We just sent you a confirmation email message with your password. Please <a href="<?= root_url('/account/login') ?>">sign in</a> using your email and password.</p>
-            <p><a class="link_button" href="<?= root_url('account/login')?>">Login</a></p>
+            <p><a class="link_button round" href="<?= root_url('account/login')?>">Login</a></p>
         <? endif ?>
     </div>
 </div>

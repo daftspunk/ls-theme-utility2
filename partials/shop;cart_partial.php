@@ -6,7 +6,7 @@
     if ($item_num):
         $last_index = count($items)-1;
 ?>
-    <?= open_form() ?>
+    <?= open_form(array('class'=>'custom')) ?>
         <input type="hidden" name="redirect" value="<?= root_url('/store/checkout-start') ?>" />
         <table class="table order_table">
             <thead>
@@ -157,5 +157,5 @@
     </form>
 <? else: ?>
     <p>Your cart is empty.</p>
-    <p><a class="link_button" href="<?= root_url('store')?>">Continue shopping</a></p>
+    <p><a class="link_button round" href="<?= root_url('store')?>">Continue shopping</a></p>
 <? endif ?>​

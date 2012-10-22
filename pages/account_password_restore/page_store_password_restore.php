@@ -16,6 +16,6 @@
         </div>
     <? else: ?>
         <p>Thank you! We just sent you an email message with your new password.</p>
-        <p><a class="link_button" href="<?= root_url('account/login')?>">Login</a></p>
+        <p><a class="link_button round" href="<?= root_url('account/login')?>">Login</a></p>
     <? endif ?>
 </div>

@@ -22,7 +22,7 @@
             </form>    
         <? else: ?>
             <p>Your password has been successfully updated.</p>
-            <p><a class="link_button" href="<?= root_url('store')?>">Continue shopping</a></p>
+            <p><a class="link_button round" href="<?= root_url('store')?>">Continue shopping</a></p>
         <? endif ?>
         </div>
     </div>

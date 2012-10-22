@@ -17,7 +17,7 @@
             <h4>Shop by subcategory</h4>
             <ul class="link-list">
                 <? foreach ($subcategories as $subcategory):  ?>
-                    <li><a class="link_button" href="<?= $subcategory->page_url('store/category') ?>"><?= h($subcategory->name) ?></a></li>
+                    <li><a class="link_button round" href="<?= $subcategory->page_url('store/category') ?>"><?= h($subcategory->name) ?></a></li>
                 <? endforeach ?>
             </ul>
         <? endif ?>
@@ -33,11 +33,11 @@
         
         <? if (!$has_subcategories && !$has_products): ?>
             <p>This category does not contain any products or subcategories.</p>
-            <p><a class="link_button" href="<?= root_url('store')?>">Return to the Store</a></p>
+            <p><a class="link_button round" href="<?= root_url('store')?>">Return to the Store</a></p>
         <? endif ?>
     <? else: ?>
         <h3>Category not found</h3>
         <p>We are sorry, the specified category cannot be found.</p>    
-        <p><a class="link_button" href="<?= root_url('store')?>">Return to the Store</a></p>
+        <p><a class="link_button round" href="<?= root_url('store')?>">Return to the Store</a></p>
     <? endif ?>
 </div>

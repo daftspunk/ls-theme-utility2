@@ -15,6 +15,6 @@
         
         <? $this->render_partial('shop:order_details', array('order'=>$order, 'items'=>$items)) ?>
 
-        <p><a class="link_button" href="<?= root_url('store')?>">Continue shopping</a></p>
+        <p><a class="link_button round" href="<?= root_url('store')?>">Continue shopping</a></p>
     <? endif ?>
 </div>

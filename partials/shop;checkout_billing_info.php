@@ -51,6 +51,7 @@
         <label for="country">Country</label>
         <select autocomplete="off" id="country" name="country" onchange="return $('#country').getForm().sendRequest('shop:on_updateStateList', {
                 extraFields: {'country': $('#country').val(), 'control_name': 'state', 'control_id': 'state', 'current_state': '<?= $billing_info->state ?>'},
+                onAfterUpdate: refresh_custom_forms,
                 update: {'billing_states': 'shop:state_selector'}
             })">
             <? foreach ($countries as $country): ?>

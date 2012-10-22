@@ -39,5 +39,5 @@
     <? endif ?>
 <? else: ?>
     <p>Post not found.</p>
-    <p><a class="link_button" href="<?= root_url('news')?>">Return to the News page</a></p>
+    <p><a class="link_button round" href="<?= root_url('news')?>">Return to the News page</a></p>
 <? endif ?>

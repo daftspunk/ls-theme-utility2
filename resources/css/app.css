@@ -31,7 +31,7 @@ span.on_sale { display: block; width: 81px; height: 28px; text-indent: -10000px;
 .order_table tfoot div.cart_subtotal { font-size: 19px; }
 
 table.fancy_selector { border: none; border-collapse: collapse; width: 100%; font-size: 11px; }
-table.fancy_selector thead th { padding: 5px 10px; text-shadow: 0 1px 1px #fff; border-bottom: 3px solid #ccc; color: #2b3f6d; background: #c1cfef; border-bottom-color: #2b3f6d; }
+table.fancy_selector thead th { padding: 8px 10px 5px 10px; text-transform: uppercase; font-size: 12px; color: #2d6596; background: #d1e2f1; border-bottom: 3px solid #5b99ce; text-shadow: 0 1px 1px white; }
 table.fancy_selector tbody th, table.fancy_selector tbody td, table.fancy_selector tbody a { padding: 0; margin: 0; border: none; line-height: inherit; }
 table.fancy_selector tbody a { display: block; text-shadow: 0 1px 1px #fff; padding: 5px 10px; text-decoration: none; position: relative; }
 table.fancy_selector tbody th a { color: #333; }
@@ -40,9 +40,9 @@ table.fancy_selector th.first { -moz-border-radius-topleft: 5px; -webkit-border-
 table.fancy_selector th.last { -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
 table.fancy_selector tr.even { background-color: #ededed; }
 table.fancy_selector .number { text-align: right; }
-table.fancy_selector tbody tr:hover a, table.fancy_selector tr.current a { text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1); color: white; }
+table.fancy_selector tbody tr:hover a, table.fancy_selector tr.current a { text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1); color: white; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #488dc8), color-stop(100%, #3373a9)); background-image: -webkit-linear-gradient(top, #488dc8, #3373a9); background-image: -moz-linear-gradient(top, #488dc8, #3373a9); background-image: -o-linear-gradient(top, #488dc8, #3373a9); background-image: linear-gradient(top, #488dc8, #3373a9); }
 table.fancy_selector .marker { position: absolute; height: 100%; width: 20px; top: 0; left: -20px; background: transparent url(../images/current_marker.png) no-repeat right 50%; }
-table.fancy_selector .marker, table.fancy_selector tr.current td, table.fancy_selector tr.current th, table.fancy_selector tbody tr:hover td, table.fancy_selector tbody tr:hover th { background-color: #2b3f6d; }
+table.fancy_selector .marker, table.fancy_selector tr.current td, table.fancy_selector tr.current th, table.fancy_selector tbody tr:hover td, table.fancy_selector tbody tr:hover th { background-color: #3980bd; }
 
 .taj, .align_justify { text-align: justify; }
 

@@ -8,5 +8,5 @@
     <? else: ?>
         <p>Payment method "<?= h($payment_method->name) ?>" has no payment form. Please pay and notify us.</p>    
     <? endif ?>
-    <p><a class="link_button" href="<?= root_url('store')?>">Continue shopping</a></p>
+    <p><a class="link_button round" href="<?= root_url('store')?>">Continue shopping</a></p>
 <? endif ?>

@@ -14,7 +14,13 @@
         $handler = 'place_order_and_pay';
     
 ?>
-<?= open_form(array('onsubmit'=>"return $(this).sendRequest('$handler', {update:{'p_checkout_partial': 'shop:checkout_partial'}})")) ?>
+<?= open_form(array(
+    'class' => 'custom',
+    'onsubmit'=>"return $(this).sendRequest('$handler', {
+        onAfterUpdate: refresh_custom_forms,
+        update:{'p_checkout_partial': 'shop:checkout_partial'}
+    })")) 
+?>
     <? $this->render_partial('shop:checkout_progress') ?>
     <div class="row">
         <div class="eight columns">
