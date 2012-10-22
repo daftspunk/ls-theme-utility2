@@ -1,0 +1,26 @@
+.checkout_summary {
+    padding-top: 2em;
+
+    ul li { 
+        padding:0;
+    }
+
+    h6 {
+        color: #999;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        color: #444;
+        font-style: italic;
+        font-size: 16px;
+        span.product_price { 
+            font-style: normal;
+            font-size: 19px;
+            font-weight: bold;
+        }
+    }
+}

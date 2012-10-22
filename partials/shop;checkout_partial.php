@@ -13,26 +13,25 @@
     }  else
         $handler = 'place_order_and_pay';
     
-    echo open_form(array('onsubmit'=>"return $(this).sendRequest('$handler', {update:{'p_checkout_partial': 'shop:checkout_partial'}})"));
 ?>
-    <div class="grid_11 alpha">
-        <div class="vert_separator_right_shadow">
-            <? $this->render_partial('shop:checkout_progress') ?>
-
-            <div class="grid_8 alpha">
-            <?
-                switch ($checkout_step)
-                {
-                    case 'billing_info': $this->render_partial('shop:checkout_billing_info'); break;
-                    case 'shipping_info': $this->render_partial('shop:checkout_shipping_info'); break;
-                    case 'shipping_method': $this->render_partial('shop:checkout_shipping_method'); break;
-                }
-            ?>
+<?= open_form(array('onsubmit'=>"return $(this).sendRequest('$handler', {update:{'p_checkout_partial': 'shop:checkout_partial'}})")) ?>
+    <? $this->render_partial('shop:checkout_progress') ?>
+    <div class="row">
+        <div class="eight columns">
+            <div class="separator right shadow">
+                <?
+                    switch ($checkout_step)
+                    {
+                        case 'billing_info': $this->render_partial('shop:checkout_billing_info'); break;
+                        case 'shipping_info': $this->render_partial('shop:checkout_shipping_info'); break;
+                        case 'shipping_method': $this->render_partial('shop:checkout_shipping_method'); break;
+                    }
+                ?>
             </div>
         </div>
-    </div>
-    <div class="grid_5 omega">
-        <? $this->render_partial('shop:checkout_summary') ?>
+        <div class="four columns">
+            <? $this->render_partial('shop:checkout_summary') ?>
+        </div>
     </div>
     <input name="auto_skip_shipping" value="1" type="hidden"/>
     <input name="auto_skip_to" value="review" type="hidden"/>

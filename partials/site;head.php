@@ -1,4 +1,3 @@
-<script> var require = {baseUrl: "<?=theme_resource_url('javascript')?>"}; </script>
 <?= $this->js_combine(array(
     '@javascript/jquery.js',
     'ls_core_jquery',
@@ -26,7 +25,7 @@
     '@javascript/phpr.js',
     '@javascript/pages/store_product.js',
 
-), array('src_mode'=>true)) ?>
+), array('src_mode'=>true, 'skip_cache'=>true)) ?>
 
 <?= $this->css_combine(array(
     // '@css/global.css',
@@ -37,5 +36,5 @@
     '@css/templates.css',
     '@css/pages.css',
     '@css/app.css',
-), array('src_mode'=>true)) ?>
+), array('src_mode'=>true, 'skip_cache'=>true)) ?>
 <link href="<?= root_url('news/rss') ?>" type="application/rss+xml" rel="alternate" title="News" />

@@ -3,13 +3,14 @@
         'billing_info' => 'Billing Information',
         'shipping_info' => 'Shipping Information',
         'shipping_method' => 'Shipping Method',
-        'review' => 'Review<br/>and Pay'
+        'review' => 'Review and Pay'
     );
     
     if (!$shipping_required)
         unset($steps['shipping_method']);
 ?>
-<ol class="progress-tracker six-up">
+
+<ol class="progress-tracker four-up">
     <?
         $current_found = false;
         $index = 0;
@@ -20,7 +21,8 @@
             $current_found = $current_found || $is_current;
             $index++;
         ?>
-        <li class="<?=(!$current_found || $is_current)?'active':''?> step<?=$index?>">
+        <li class="<?=(!$current_found || $is_current)?'active':''?>">
+            <em><?=$index?></em>
             <span>
                 <? if ($current_found): ?>
                     <?= $name ?>
