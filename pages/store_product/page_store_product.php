@@ -10,7 +10,7 @@
     <? else: ?>
         <div class="page_header">
             <h2><?= h($this->page->title) ?></h2>
-        </div>    
+        </div>
         <div id="product_page"><? $this->render_partial('shop:product_partial') ?></div>
     <? endif ?>
 </div>

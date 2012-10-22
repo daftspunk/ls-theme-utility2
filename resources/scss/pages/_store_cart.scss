@@ -1,0 +1,24 @@
+#page_store_cart {
+
+	.product_table  {
+		.align_right { text-align: right !important; }
+		th.item { width: 60%; }
+		th.controls { width:1%; }
+		tbody td {
+			img.product_image { margin-right:1em; }
+			div.bundle_item { padding-left:30px; }
+		}
+		tbody tr.bundle_totals {
+			background: $grayLighter;
+			td { font-weight: bold; }
+		}
+
+		tfoot {
+			tr { border-bottom: 1px solid $grayLighter; }
+			th { padding-top:2em; padding-bottom:2em; }
+			div.cart_subtotal_label { text-transform: uppercase; font-size:12px; }
+			div.cart_subtotal { font-size:19px; }
+		}
+	}
+	
+}

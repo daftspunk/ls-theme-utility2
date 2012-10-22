@@ -10,7 +10,8 @@
         <? endforeach ?>
     </div>
     <script>
-        $('#product_images').portfolio();
-        //require(['behaviors/portfolio'], function(p){ p($('#product_images')); });
+        $(function(){
+            $('#product_images').portfolio();
+        });
     </script>
 <? endif ?>
