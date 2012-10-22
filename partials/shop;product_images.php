@@ -6,10 +6,11 @@
     <div id="product_images" class="product_images">
         <? foreach ($product->images as $key=>$image): ?>
             <!-- <a title="<?= h($image->title) ?>" class="gallery_image" rel="product_image" href="<?= $image->getThumbnailPath(500, 'auto') ?>"><img src="<?= $image->getThumbnailPath('auto', 'auto') ?>" alt="" /></a> -->
-            <img src="<?= $image->getThumbnailPath(500, 'auto') ?>" alt="" data-image-id="<?=$image->id?>" data-thumb-image="<?= $image->getThumbnailPath('auto', 'auto') ?>" />
+            <img src="<?= $image->getThumbnailPath(500, 'auto') ?>" alt="" data-image-id="<?=$image->id?>" data-image-thumb="<?= $image->getThumbnailPath('auto', 'auto') ?>" />
         <? endforeach ?>
     </div>
     <script>
-        require(['behaviors/portfolio'], function(p){ p($('#product_images')); });
+        $('#product_images').portfolio();
+        //require(['behaviors/portfolio'], function(p){ p($('#product_images')); });
     </script>
 <? endif ?>

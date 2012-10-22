@@ -1,29 +1,31 @@
 <script> var require = {baseUrl: "<?=theme_resource_url('javascript')?>"}; </script>
-<script data-main="frameworks/main" src="<?=theme_resource_url('javascript/require-jquery.js')?>"></script>
 <?= $this->js_combine(array(
+    '@javascript/jquery.js',
     'ls_core_jquery',
+    '@vendor/ui/jquery-ui.js', 
+    '@vendor/carousel/js/jquery.jcarousel.js',
 
-    // '@javascript/frameworks/main.js',
+    // Foundation
+    '@javascript/frameworks/foundation/modernizr.foundation.js',
+    '@javascript/frameworks/foundation/jquery.foundation.orbit.js',
+    '@javascript/frameworks/foundation/jquery.foundation.reveal.js',
+    '@javascript/frameworks/foundation/jquery.foundation.forms.js',
+    '@javascript/frameworks/foundation/jquery.foundation.alerts.js',
+    '@javascript/frameworks/foundation/jquery.placeholder.js',
+    '@javascript/frameworks/foundation/app.js',
+
+    // Utility
+    '@javascript/frameworks/utility/jquery.utility.statusbar.js',
+    '@javascript/frameworks/utility/jquery.utility.portfolio.js',
+    '@javascript/frameworks/utility/jquery.utility.stars.js',
+    '@javascript/frameworks/utility/jquery.utility.forms.js',
+    '@javascript/frameworks/utility/jquery.utility.popup.js',
+    '@javascript/frameworks/utility/app.js',
+
     '@javascript/app.js',
     '@javascript/phpr.js',
-
-    // '@javascript/foundation/modernizr.foundation.js',
-    // '@javascript/frameworks/foundation/jquery.foundation.orbit.js',
-    // '@javascript/frameworks/foundation/jquery.foundation.reveal.js',
-    // '@javascript/foundation/jquery.foundation.forms.js',
-    // '@javascript/foundation/jquery.foundation.alerts.js',
-    // '@javascript/foundation/jquery.placeholder.js',
-    // '@javascript/foundation/app.js',
-
-    // '@vendor/ui/jquery-ui.js', 
-    // '@vendor/carousel/js/jquery.jcarousel.js',
-
-    // '@javascript/utility/jquery.utility.statusbar.js',
-    // '@javascript/utility/jquery.utility.stars.js',
-    // '@javascript/utility/jquery.utility.forms.js',
-    // '@javascript/frameworks/utility/jquery.utility.popup.js',
-    // '@javascript/utility/app.js',
     '@javascript/pages/store_product.js',
+
 ), array('src_mode'=>true)) ?>
 
 <?= $this->css_combine(array(

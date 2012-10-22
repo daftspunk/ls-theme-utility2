@@ -29,12 +29,10 @@ var Utility = (function(util, $){
         });
 
         page.init_effects = function() {
-            require(['widget', 'utility/forms'], function() {
-                page.init_price_calculator();
-                $.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
-                $.utility.forms && $(document).forms() && $(document).forms('refresh');
-                $('td.qty_controls input.input-quantity').change(page.update_product_price);
-            });
+            page.init_price_calculator();
+            $.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
+            $.utility.forms && $(document).forms() && $(document).forms('refresh');
+            $('td.qty_controls input.input-quantity').change(page.update_product_price);
         }
 
         page.get_extra_option_price = function(option) {
