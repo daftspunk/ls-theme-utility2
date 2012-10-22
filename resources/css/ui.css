@@ -372,70 +372,70 @@ the same height. You can optionally uncomment the
 lines below to support arbitrary height, but know
 that IE7/8 do not support :nth-child.
 -------------------------------------------------- */
-.block-grid { display: block; overflow: hidden; padding: 0; }
-.block-grid > li { display: block; height: auto; float: left; }
-.block-grid.one-up { margin: 0; }
-.block-grid.one-up > li { width: 100%; padding: 0 0 15px; }
-.block-grid.two-up { margin: 0 -15px; }
-.block-grid.two-up > li { width: 50%; padding: 0 15px 15px; }
-.block-grid.two-up > li:nth-child(2n+1) { clear: both; }
-.block-grid.three-up { margin: 0 -12px; }
-.block-grid.three-up > li { width: 33.33%; padding: 0 12px 12px; }
-.block-grid.three-up > li:nth-child(3n+1) { clear: both; }
-.block-grid.four-up { margin: 0 -10px; }
-.block-grid.four-up > li { width: 25%; padding: 0 10px 10px; }
-.block-grid.four-up > li:nth-child(4n+1) { clear: both; }
-.block-grid.five-up { margin: 0 -8px; }
-.block-grid.five-up > li { width: 20%; padding: 0 8px 8px; }
-.block-grid.five-up > li:nth-child(5n+1) { clear: both; }
-.block-grid.six-up { margin: 0 -15px; }
-.block-grid.six-up > li { width: 16.6%; padding: 0 8px 8px; }
-.block-grid.six-up > li:nth-child(6n+1) { clear: both; }
-.block-grid.seven-up { margin: 0 -15px; }
-.block-grid.seven-up > li { width: 14.28%; padding: 0 8px 8px; }
-.block-grid.seven-up > li:nth-child(7n+1) { clear: both; }
-.block-grid.eight-up { margin: 0 -15px; }
-.block-grid.eight-up > li { width: 12.5%; padding: 0 8px 8px; }
-.block-grid.eight-up > li:nth-child(8n+1) { clear: both; }
-.block-grid.nine-up { margin: 0 -15px; }
-.block-grid.nine-up > li { width: 11.11%; padding: 0 8px 8px; }
-.block-grid.nine-up > li:nth-child(9n+1) { clear: both; }
-.block-grid.ten-up { margin: 0 -15px; }
-.block-grid.ten-up > li { width: 10%; padding: 0 8px 8px; }
-.block-grid.ten-up > li:nth-child(10n+1) { clear: both; }
-.block-grid.eleven-up { margin: 0 -15px; }
-.block-grid.eleven-up > li { width: 9.09%; padding: 0 8px 8px; }
-.block-grid.eleven-up > li:nth-child(11n+1) { clear: both; }
-.block-grid.twelve-up { margin: 0 -15px; }
-.block-grid.twelve-up > li { width: 8.33%; padding: 0 8px 8px; }
-.block-grid.twelve-up > li:nth-child(12n+1) { clear: both; }
+.block-grid, .progress-tracker { display: block; overflow: hidden; padding: 0; }
+.block-grid > li, .progress-tracker > li { display: block; height: auto; float: left; }
+.block-grid.one-up, .one-up.progress-tracker { margin: 0; }
+.block-grid.one-up > li, .one-up.progress-tracker > li { width: 100%; padding: 0 0 15px; }
+.block-grid.two-up, .two-up.progress-tracker { margin: 0 -15px; }
+.block-grid.two-up > li, .two-up.progress-tracker > li { width: 50%; padding: 0 15px 15px; }
+.block-grid.two-up > li:nth-child(2n+1), .two-up.progress-tracker > li:nth-child(2n+1) { clear: both; }
+.block-grid.three-up, .three-up.progress-tracker { margin: 0 -12px; }
+.block-grid.three-up > li, .three-up.progress-tracker > li { width: 33.33%; padding: 0 12px 12px; }
+.block-grid.three-up > li:nth-child(3n+1), .three-up.progress-tracker > li:nth-child(3n+1) { clear: both; }
+.block-grid.four-up, .four-up.progress-tracker { margin: 0 -10px; }
+.block-grid.four-up > li, .four-up.progress-tracker > li { width: 25%; padding: 0 10px 10px; }
+.block-grid.four-up > li:nth-child(4n+1), .four-up.progress-tracker > li:nth-child(4n+1) { clear: both; }
+.block-grid.five-up, .five-up.progress-tracker { margin: 0 -8px; }
+.block-grid.five-up > li, .five-up.progress-tracker > li { width: 20%; padding: 0 8px 8px; }
+.block-grid.five-up > li:nth-child(5n+1), .five-up.progress-tracker > li:nth-child(5n+1) { clear: both; }
+.block-grid.six-up, .six-up.progress-tracker { margin: 0 -15px; }
+.block-grid.six-up > li, .six-up.progress-tracker > li { width: 16.6%; padding: 0 8px 8px; }
+.block-grid.six-up > li:nth-child(6n+1), .six-up.progress-tracker > li:nth-child(6n+1) { clear: both; }
+.block-grid.seven-up, .seven-up.progress-tracker { margin: 0 -15px; }
+.block-grid.seven-up > li, .seven-up.progress-tracker > li { width: 14.28%; padding: 0 8px 8px; }
+.block-grid.seven-up > li:nth-child(7n+1), .seven-up.progress-tracker > li:nth-child(7n+1) { clear: both; }
+.block-grid.eight-up, .eight-up.progress-tracker { margin: 0 -15px; }
+.block-grid.eight-up > li, .eight-up.progress-tracker > li { width: 12.5%; padding: 0 8px 8px; }
+.block-grid.eight-up > li:nth-child(8n+1), .eight-up.progress-tracker > li:nth-child(8n+1) { clear: both; }
+.block-grid.nine-up, .nine-up.progress-tracker { margin: 0 -15px; }
+.block-grid.nine-up > li, .nine-up.progress-tracker > li { width: 11.11%; padding: 0 8px 8px; }
+.block-grid.nine-up > li:nth-child(9n+1), .nine-up.progress-tracker > li:nth-child(9n+1) { clear: both; }
+.block-grid.ten-up, .ten-up.progress-tracker { margin: 0 -15px; }
+.block-grid.ten-up > li, .ten-up.progress-tracker > li { width: 10%; padding: 0 8px 8px; }
+.block-grid.ten-up > li:nth-child(10n+1), .ten-up.progress-tracker > li:nth-child(10n+1) { clear: both; }
+.block-grid.eleven-up, .eleven-up.progress-tracker { margin: 0 -15px; }
+.block-grid.eleven-up > li, .eleven-up.progress-tracker > li { width: 9.09%; padding: 0 8px 8px; }
+.block-grid.eleven-up > li:nth-child(11n+1), .eleven-up.progress-tracker > li:nth-child(11n+1) { clear: both; }
+.block-grid.twelve-up, .twelve-up.progress-tracker { margin: 0 -15px; }
+.block-grid.twelve-up > li, .twelve-up.progress-tracker > li { width: 8.33%; padding: 0 8px 8px; }
+.block-grid.twelve-up > li:nth-child(12n+1), .twelve-up.progress-tracker > li:nth-child(12n+1) { clear: both; }
 
 /* Mobile Block Grids */
-@media only screen and (max-width: 767px) { .block-grid.mobile > li { float: none; width: 100%; margin-left: 0; }
-  .block-grid > li { clear: none !important; }
-  .block-grid.mobile-one-up > li { width: 100%; }
-  .block-grid.mobile-two-up > li { width: 50%; }
-  .block-grid.mobile-two-up > li:nth-child(2n+1) { clear: both; }
-  .block-grid.mobile-three-up > li { width: 33.33%; }
-  .block-grid.mobile-three-up > li:nth-child(3n+1) { clear: both; }
-  .block-grid.mobile-four-up > li { width: 25%; }
-  .block-grid.mobile-four-up > li:nth-child(4n+1) { clear: both; }
-  .block-grid.mobile-five-up > li { width: 20%; }
-  .block-grid.mobile-five-up > li:nth-child(5n+1) { clear: both; }
-  .block-grid.mobile-six-up > li { width: 16.6%; }
-  .block-grid.mobile-six-up > li:nth-child(6n+1) { clear: both; }
-  .block-grid.mobile-seven-up > li { width: 14.28%; }
-  .block-grid.mobile-seven-up > li:nth-child(7n+1) { clear: both; }
-  .block-grid.mobile-eight-up > li { width: 12.5%; }
-  .block-grid.mobile-eight-up > li:nth-child(8n+1) { clear: both; }
-  .block-grid.mobile-nine-up > li { width: 11.11%; }
-  .block-grid.mobile-nine-up > li:nth-child(9n+1) { clear: both; }
-  .block-grid.mobile-ten-up > li { width: 10%; }
-  .block-grid.mobile-ten-up > li:nth-child(10n+1) { clear: both; }
-  .block-grid.mobile-eleven-up > li { width: 9.09%; }
-  .block-grid.mobile-eleven-up > li:nth-child(11n+1) { clear: both; }
-  .block-grid.mobile-twelve-up > li { width: 8.33%; }
-  .block-grid.mobile-twelve-up > li:nth-child(12n+1) { clear: both; } }
+@media only screen and (max-width: 767px) { .block-grid.mobile > li, .mobile.progress-tracker > li { float: none; width: 100%; margin-left: 0; }
+  .block-grid > li, .progress-tracker > li { clear: none !important; }
+  .block-grid.mobile-one-up > li, .mobile-one-up.progress-tracker > li { width: 100%; }
+  .block-grid.mobile-two-up > li, .mobile-two-up.progress-tracker > li { width: 50%; }
+  .block-grid.mobile-two-up > li:nth-child(2n+1), .mobile-two-up.progress-tracker > li:nth-child(2n+1) { clear: both; }
+  .block-grid.mobile-three-up > li, .mobile-three-up.progress-tracker > li { width: 33.33%; }
+  .block-grid.mobile-three-up > li:nth-child(3n+1), .mobile-three-up.progress-tracker > li:nth-child(3n+1) { clear: both; }
+  .block-grid.mobile-four-up > li, .mobile-four-up.progress-tracker > li { width: 25%; }
+  .block-grid.mobile-four-up > li:nth-child(4n+1), .mobile-four-up.progress-tracker > li:nth-child(4n+1) { clear: both; }
+  .block-grid.mobile-five-up > li, .mobile-five-up.progress-tracker > li { width: 20%; }
+  .block-grid.mobile-five-up > li:nth-child(5n+1), .mobile-five-up.progress-tracker > li:nth-child(5n+1) { clear: both; }
+  .block-grid.mobile-six-up > li, .mobile-six-up.progress-tracker > li { width: 16.6%; }
+  .block-grid.mobile-six-up > li:nth-child(6n+1), .mobile-six-up.progress-tracker > li:nth-child(6n+1) { clear: both; }
+  .block-grid.mobile-seven-up > li, .mobile-seven-up.progress-tracker > li { width: 14.28%; }
+  .block-grid.mobile-seven-up > li:nth-child(7n+1), .mobile-seven-up.progress-tracker > li:nth-child(7n+1) { clear: both; }
+  .block-grid.mobile-eight-up > li, .mobile-eight-up.progress-tracker > li { width: 12.5%; }
+  .block-grid.mobile-eight-up > li:nth-child(8n+1), .mobile-eight-up.progress-tracker > li:nth-child(8n+1) { clear: both; }
+  .block-grid.mobile-nine-up > li, .mobile-nine-up.progress-tracker > li { width: 11.11%; }
+  .block-grid.mobile-nine-up > li:nth-child(9n+1), .mobile-nine-up.progress-tracker > li:nth-child(9n+1) { clear: both; }
+  .block-grid.mobile-ten-up > li, .mobile-ten-up.progress-tracker > li { width: 10%; }
+  .block-grid.mobile-ten-up > li:nth-child(10n+1), .mobile-ten-up.progress-tracker > li:nth-child(10n+1) { clear: both; }
+  .block-grid.mobile-eleven-up > li, .mobile-eleven-up.progress-tracker > li { width: 9.09%; }
+  .block-grid.mobile-eleven-up > li:nth-child(11n+1), .mobile-eleven-up.progress-tracker > li:nth-child(11n+1) { clear: both; }
+  .block-grid.mobile-twelve-up > li, .mobile-twelve-up.progress-tracker > li { width: 8.33%; }
+  .block-grid.mobile-twelve-up > li:nth-child(12n+1), .mobile-twelve-up.progress-tracker > li:nth-child(12n+1) { clear: both; } }
 /* Requires globals.css */
 /* Normal Buttons ---------------------- */
 .button { width: auto; background: #3980bd; border: 1px solid #275882; -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset; color: white; cursor: pointer; display: inline-block; font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; line-height: 1; margin: 0; outline: none; padding: 9px 18px 10px; position: relative; text-align: center; text-decoration: none; -webkit-transition: background-color 0.15s ease-in-out; -moz-transition: background-color 0.15s ease-in-out; -o-transition: background-color 0.15s ease-in-out; transition: background-color 0.15s ease-in-out; /* Hovers */ /* Sizes */ /* Colors */ /* Radii */ /* Layout */ /* Disabled ---------- */ }
@@ -1724,6 +1724,21 @@ dl.tabs.bottom dd.active { border-bottom: 3px solid #3980bd; margin-top: -1px; b
 .separator.right, .separator.fr, .separator.float_right, .separator.pull_right, .separator.pull-right { padding-right: 30px; border-right: 2px dashed #e6e6e6; background: transparent; }
 .separator.right.shadow, .separator.shadow.fr, .separator.shadow.float_right, .separator.shadow.pull_right, .separator.shadow.pull-right { border-right: none; -webkit-box-shadow: 15px 0 40px -40px black; -moz-box-shadow: 15px 0 40px -40px black; box-shadow: 15px 0 40px -40px black; }
 
+.progress-tracker { min-height: 3em; margin: 0; padding: 0; }
+.progress-tracker li { color: #555555; position: relative; }
+.progress-tracker li span { display: block; margin-left: 26px; line-height: 1.1; }
+.progress-tracker li.active { color: #3980bd; }
+.progress-tracker li:before { width: 26px; line-height: 1.1; text-align: right; font-weight: bold; font-size: 28px; position: absolute; left: 0; top: 0; }
+.progress-tracker li.step1:before, .progress-tracker li.one:before, .progress-tracker .row li.one:before, .row .progress-tracker li.one:before { content: "\31"; }
+.progress-tracker li.step2:before, .progress-tracker li.two:before, .progress-tracker .row li.two:before, .row .progress-tracker li.two:before { content: "\32"; }
+.progress-tracker li.step3:before, .progress-tracker li.three:before, .progress-tracker .row li.three:before, .row .progress-tracker li.three:before { content: "\33"; }
+.progress-tracker li.step4:before, .progress-tracker li.four:before, .progress-tracker .row li.four:before, .row .progress-tracker li.four:before { content: "\34"; }
+.progress-tracker li.step5:before, .progress-tracker li.five:before, .progress-tracker .row li.five:before, .row .progress-tracker li.five:before { content: "\35"; }
+.progress-tracker li.step6:before, .progress-tracker li.six:before, .progress-tracker .row li.six:before, .row .progress-tracker li.six:before { content: "\36"; }
+.progress-tracker li.step8:before, .progress-tracker li.seven:before, .progress-tracker .row li.seven:before, .row .progress-tracker li.seven:before { content: "\38"; }
+.progress-tracker li.step7:before, .progress-tracker li.eight:before, .progress-tracker .row li.eight:before, .row .progress-tracker li.eight:before { content: "\37"; }
+.progress-tracker li.step9:before, .progress-tracker li.nine:before, .progress-tracker .row li.nine:before, .row .progress-tracker li.nine:before { content: "\39"; }
+
 /* -------------------------------------------------- 
 :: Popup
 ----------------------------------------------------- */
@@ -1745,6 +1760,6 @@ dl.tabs.bottom dd.active { border-bottom: 3px solid #3980bd; margin-top: -1px; b
 /* -------------------------------------------------- 
 :: Grid
 ----------------------------------------------------- */
-.block-grid { overflow: visible; *zoom: 1; }
-.block-grid:before, .block-grid:after { content: ""; display: table; }
-.block-grid:after { clear: both; }
+.block-grid, .progress-tracker { overflow: visible; *zoom: 1; }
+.block-grid:before, .progress-tracker:before, .block-grid:after, .progress-tracker:after { content: ""; display: table; }
+.block-grid:after, .progress-tracker:after { clear: both; }
