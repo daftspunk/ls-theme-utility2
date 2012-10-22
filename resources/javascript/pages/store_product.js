@@ -29,6 +29,8 @@ var Utility = (function(util, $){
         });
 
         page.init_effects = function() {
+            $('#product_images').portfolio('destroy');
+            $('#product_images').portfolio();
             page.init_price_calculator();
             $.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
             $.utility.forms && $(document).forms() && $(document).forms('refresh');

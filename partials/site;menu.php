@@ -16,7 +16,7 @@
                 <li class="store <?= $current_tab == 'store' ? 'active' : null ?> has-dropdown">
                     <a href="<?=root_url('/store')?>" class="main">Store</a>
                     <? 
-                        $categories = Shop_Category::create()->list_root_children(); 
+                        $categories = Shop_Category::create()->list_root_children('front_end_sort_order'); 
                     ?>
                     <ul class="dropdown">
                         <? foreach ($categories as $category):  ?>

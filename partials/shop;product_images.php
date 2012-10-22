@@ -9,9 +9,4 @@
             <img src="<?= $image->getThumbnailPath(500, 'auto') ?>" alt="" data-image-id="<?=$image->id?>" data-image-thumb="<?= $image->getThumbnailPath('auto', 'auto') ?>" />
         <? endforeach ?>
     </div>
-    <script>
-        $(function(){
-            $('#product_images').portfolio();
-        });
-    </script>
 <? endif ?>
