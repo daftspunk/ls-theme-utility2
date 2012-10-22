@@ -10,6 +10,7 @@
     '@javascript/frameworks/foundation/jquery.foundation.reveal.js',
     '@javascript/frameworks/foundation/jquery.foundation.forms.js',
     '@javascript/frameworks/foundation/jquery.foundation.alerts.js',
+    '@javascript/frameworks/foundation/jquery.foundation.topbar.js',
     '@javascript/frameworks/foundation/jquery.placeholder.js',
     '@javascript/frameworks/foundation/app.js',
 

@@ -30,7 +30,7 @@ var Utility = (function(util, $){
 
         page.init_effects = function() {
             $('#product_images').portfolio('destroy');
-            $('#product_images').portfolio();
+            $('#product_images').portfolio({ thumb_mode: 'orbit' });
             page.init_price_calculator();
             $.fn.foundationCustomForms && $.foundation.customForms.appendCustomMarkup();
             $.utility.forms && $(document).forms() && $(document).forms('refresh');
@@ -38,7 +38,7 @@ var Utility = (function(util, $){
         }
 
         page.get_extra_option_price = function(option) {
-            var price = jQuery('input.extra_option_price', $(option).parents('td')).val();
+            var price = jQuery('input.extra_option_price', $(option).parents('table')).val();
             if (!isNaN(price))
                 return parseFloat(price);
                 
@@ -48,7 +48,7 @@ var Utility = (function(util, $){
         page.update_product_price = function() {
             var extra_price = 0;
             $("input.extra_option_cb:checked").each(function(){
-                extra_price += get_extra_option_price(this);
+                extra_price += page.get_extra_option_price(this);
             });
             
             var bundle_price = 0;
@@ -60,7 +60,7 @@ var Utility = (function(util, $){
                     
                     var product_parameters = $e.parent().closest('div.product_parameters');
                     product_parameters.find('input.bundle_extra_option_cb:checked').each(function(){
-                        price += get_extra_option_price(this);
+                        price += page.get_extra_option_price(this);
                     });
 
                     /*
@@ -92,8 +92,8 @@ var Utility = (function(util, $){
         }
 
         page.init_price_calculator = function() {
-            $("input.extra_option_cb").click(page.update_product_price);
-            $("input.bundle_extra_option_cb").click(page.update_product_price);
+            $("input.extra_option_cb").change(function() { page.update_product_price(); });
+            $("input.bundle_extra_option_cb").change(function() { page.update_product_price(); });
             
             page.update_product_price();
         }
