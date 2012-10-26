@@ -3,6 +3,7 @@
 ?>
 <? if ($group): ?>
 
+<div class="product_list">
     <ul class="block-grid">
         <? foreach ($group->products as $index=>$product): ?>
             <li>
@@ -21,7 +22,7 @@
                     <p>
                         <span class="product_price"><?= format_currency($product->get_discounted_price()) ?></span>
                         <a href="#" 
-                            class="button_control" 
+                            class="tiny button radius" 
                             onclick="return $(this).getForm().sendRequest('shop:on_addToCart', { 
                                 onSuccess: function(){ custom_alert('The product has been added to the cart'); }, 
                                 update: {'mini_cart': 'shop:mini_cart'}
@@ -51,6 +52,7 @@
             </li>
         <? endforeach  ?>
     </ul>
+</div>
 
 <? else:  ?>
 

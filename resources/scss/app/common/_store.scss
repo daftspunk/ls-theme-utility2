@@ -21,7 +21,17 @@ span.on_sale {
 .product_list {
 	h5 { margin-top:0; }
 	.star-rating { margin-bottom:0; position:relative; top:-1em; }
+    .product_price { 
+        font-style: normal;
+        font-size: 17px;
+        font-weight: bold;
+        position: relative;
+        top: 4px;
+        color: $quietColor;
+        margin-right: 4px;
+    }
 }
+
 
 .add_to_cart_control {
     border-collapse: collapse;

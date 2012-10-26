@@ -9,6 +9,7 @@ span.on_sale { display: block; width: 81px; height: 28px; text-indent: -10000px;
 
 .product_list h5 { margin-top: 0; }
 .product_list .star-rating { margin-bottom: 0; position: relative; top: -1em; }
+.product_list .product_price { font-style: normal; font-size: 17px; font-weight: bold; position: relative; top: 4px; color: #555555; margin-right: 4px; }
 
 .add_to_cart_control { border-collapse: collapse; border: none; width: auto; }
 .add_to_cart_control td { vertical-align: middle; padding-right: 8px; }

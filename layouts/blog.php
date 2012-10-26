@@ -36,13 +36,17 @@
         </div>
         <div class="container" id="content">
             <div class="row">
+                <div class="twelve columns">
+                    <div class="page_breadcrumb">
+                         <? $this->render_partial('site:breadcrumb') ?>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="nine columns">
                     <div class="separator right">
                         <div class="page_header">
                             <h1><?= h($this->page->title) ?></h1>
-                        </div>
-                        <div class="page_breadcrumb">
-                             <? $this->render_partial('site:breadcrumb') ?>
                         </div>
                         <? $this->render_page() ?>
                     </div>
