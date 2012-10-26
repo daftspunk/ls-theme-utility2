@@ -27,8 +27,6 @@
             </p>
         <? endif ?>
 
-        <?= flash_message() ?>
-        
         <?= open_form(array('class'=>'custom')) ?>
             <div class="product_panel">
 
@@ -72,16 +70,19 @@
                 <!-- Add to Cart -->
                 <? else: ?>
                     <? if (!$product->bundle_items->count): ?>
+                        <?= flash_message() ?>
                         <? $this->render_partial('shop:add_to_cart_control') ?>
                     <? endif ?>
                 <? endif ?>
             </div>
 
+            
             <!-- Product Components -->
             <? if ($product->bundle_items->count): ?>
                 <h5>Components</h5>
                 <div class="bundle_items">
                     <div id="product_bundle_items"><? $this->render_partial('shop:bundle') ?></div>
+                    <?= flash_message() ?>
                     <? $this->render_partial('shop:add_to_cart_control') ?>
                 </div>
             <? endif ?>

@@ -32,7 +32,6 @@ span.on_sale {
     }
 }
 
-
 .add_to_cart_control {
     border-collapse: collapse;
     border: none;
@@ -43,7 +42,7 @@ span.on_sale {
     }
 
     .x {
-        color: #ccc;
+        color: $grayLight;
         font-size: 19px;
         font-weight: bold;
         padding-right: 11px;
@@ -97,14 +96,21 @@ span.on_sale {
 
 // Fancy Selector
 //----------------------------------
+div.fancy_selector_wrapper {
+    @include border-radius(5px); 
+    padding-bottom: .5em;
+    background-color: #ededed;
+    @include box-shadow(0 5px 5px -5px $gray);
+}
+
 table.fancy_selector {
     
 	// Reset
     border:none; 
     border-collapse: collapse;
     width: 100%;
-
     font-size: 11px;
+
     thead {
         th {
             padding: 8px 10px 5px 10px;
@@ -114,16 +120,19 @@ table.fancy_selector {
             background: lighten($primaryColor, 40%);
             border-bottom: 3px solid lighten($primaryColor, 10%);
             @include text-shadow(0 1px 1px $white);
+            &.first { @include border-top-left-radius(5px); }
+            &.last { @include border-top-right-radius(5px); }
         }
     }
 
     tbody {
-    	// Reset standard table styles for a snug fit
+        // Reset standard table styles for a snug fit
         th, td, a { 
-        	padding:0; 
-        	margin:0; 
-        	border:none;
-        	line-height: inherit;
+            padding:0; 
+            margin:0; 
+            border:none;
+            line-height: inherit;
+            text-align: left;
         }
         a {
             display: block;
@@ -133,22 +142,24 @@ table.fancy_selector {
             position: relative;
         }
 
+        tr { background-color:#fff; }
+        tr.even { background-color: #ededed; }
         th a { color: #333; }
         td a { color: #666; }
-    }
 
+        tr:hover,
+        tr.current { 
+            a {
+                text-shadow: -1px -1px 1px rgba(0,0,0,0.1);
+                color: $white;
+                @include background-image(linear-gradient(top, lighten($mainColor,5%), darken($mainColor,5%) ));
+            }
+            td, th { background-color: $primaryColor; }
+        }
+    }
     
-    th.first { @include border-top-left-radius(5px); }
-    th.last { @include border-top-right-radius(5px); }
-    tr.even { background-color: #ededed; }
+    th { text-align: left; }
     .number { text-align: right; }
-
-    tbody tr:hover a,
-    tr.current a {
-        text-shadow: -1px -1px 1px rgba(0,0,0,0.1);
-        color: $white;
-        @include background-image(linear-gradient(top, lighten($mainColor,5%), darken($mainColor,5%) ));
-    }
 
     .marker {
         position: absolute;
@@ -156,15 +167,6 @@ table.fancy_selector {
         width: 20px;
         top: 0;
         left: -20px;
-        background: transparent url(../images/current_marker.png) no-repeat right 50%;
-    }
-
-    // Colours
-	.marker,
-	tr.current td,
-	tr.current th,
-	tbody tr:hover td,
-	tbody tr:hover th {
-		background-color: $primaryColor;
-	}    
+        background: $primaryColor url(../images/current_marker.png) no-repeat right 50%;
+    }  
 }

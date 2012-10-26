@@ -36,7 +36,7 @@
 </table>
 <? if ($product->is_discounted()): ?>
     <p>
-        <span class="label radius success"><i class="icon-thumbs-up"></i> This product is on sale!</span> Original price: 
+        <span class="label_on_sale label radius success"><i class="icon-thumbs-up"></i> This product is on sale!</span> Original price: 
         <span class="original_price"><?= format_currency($product->om('price', $posted_options)) ?></span>
     </p>
 <? endif ?>
