@@ -2,7 +2,6 @@
     '@javascript/jquery.js',
     'ls_core_jquery',
     '@vendor/ui/jquery-ui.js', 
-    '@vendor/carousel/js/jquery.jcarousel.js',
 
     // Foundation
     '@javascript/frameworks/foundation/modernizr.foundation.js',
@@ -29,8 +28,6 @@
 ), array('src_mode'=>true, 'skip_cache'=>true)) ?>
 
 <?= $this->css_combine(array(
-    // '@css/global.css',
-    // '@css/carousel_skin.css',
     '@vendor/carousel/css/skin.css',
     'ls_styles',
     '@css/ui.css',
