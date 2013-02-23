@@ -12,7 +12,7 @@
         <? $this->render_partial('site:head') ?>
         <? $this->render_head() ?>
     </head>
-    <body class="blog">
+    <body class="blog page-<?=str_replace('/', '-', substr($this->page->url, 1));?>">
         <div class="container" id="header">
             <div class="row">
                 <header class="twelve columns" role="banner">

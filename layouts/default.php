@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width">
         <title><?= h($this->page->title) ?> | Foundation</title>
         <meta name="description" content="<?= h($this->page->description) ?>"/>
         <meta name="keywords" content="<?= h($this->page->keywords) ?>"/>
         <? $this->render_partial('site:head') ?>
         <? $this->render_head() ?>
     </head>
-    <body class="default">
+    <body class="default page-<?=str_replace('/', '-', substr($this->page->url, 1));?>">
         <div class="container" id="header">
             <div class="row">
                 <header class="twelve columns" role="banner">
