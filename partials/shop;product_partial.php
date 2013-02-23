@@ -8,7 +8,9 @@
         <? if ($product->is_discounted()): ?>
             <span class="on_sale">On sale!</span>
         <? endif ?>
-        <? $this->render_partial('shop:product_images') ?>
+        <div id="p_shop_product_images">
+            <? $this->render_partial('shop:product_images') ?>
+        </div>
 
         <!-- Product Attributes -->
         <? $this->render_partial('shop:product_attributes') ?>
