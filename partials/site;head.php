@@ -5,7 +5,9 @@
 
     // Foundation
     '@javascript/frameworks/foundation/modernizr.foundation.js',
+    '@javascript/frameworks/foundation/jquery.foundation.utils.js',
     '@javascript/frameworks/foundation/jquery.foundation.orbit.js',
+    '@javascript/frameworks/foundation/jquery.foundation.clearing.js',
     '@javascript/frameworks/foundation/jquery.foundation.reveal.js',
     '@javascript/frameworks/foundation/jquery.foundation.forms.js',
     '@javascript/frameworks/foundation/jquery.foundation.alerts.js',
