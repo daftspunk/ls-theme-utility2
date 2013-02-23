@@ -37,7 +37,7 @@
             ?>
             <li>
                 <label for="<?= $item_id ?>">
-                    <input class="bundle_product_selector" type="checkbox" id="<?= $item_id ?>" name="<?= $item_name ?>" value="<?= $item_value ?>" checkbox_state($is_selected); />
+                    <input class="bundle_product_selector" type="checkbox" id="<?= $item_id ?>" name="<?= $item_name ?>" value="<?= $item_value ?>" <?=checkbox_state($is_selected)?> />
                     <?= h($item_product->product->name) ?>
                 </label>
                  
