@@ -9,7 +9,7 @@
             <select 
                 name="<?= $control_name.'['.$option->option_key.']' ?>"
                 class="expand" 
-                onchange="$(this).getForm().sendRequest('on_action', {update: {'product_bundle_items': 'shop:bundle'}, onAfterUpdate: Utility.page.init_effects})">
+                onchange="$(this).getForm().sendRequest('on_action', {update: {'product_bundle_items': 'shop:bundle'}, onAfterUpdate: Page.init_effects})">
                 <?
                     $values = $option->list_values();
                     foreach ($values as $value):      

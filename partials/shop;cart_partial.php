@@ -57,7 +57,7 @@
                                     <input type="text" name="item_quantity[<?= $item->key ?>]" class="input-quantity" 
                                         value="<?= $item->get_quantity() ?>" 
                                         onkeydown="if ((event.keyCode ? event.keyCode : event.which) == 13) $(this).getForm().sendRequest('on_action', {
-                                            onAfterUpdate: Utility.page.init_effects, 
+                                            onAfterUpdate: Page.init_effects, 
                                             update: {'p_shop_cart_partial': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}
                                         })"/>
                                 </div>
@@ -82,7 +82,7 @@
                         <td class="qty_shift controls">
                             <? if (!$bundle_item || !$bundle_item->is_required): ?>
                                 <a href="#" class="delete_row" title="Remove" 
-                                    onclick="return $(this).getForm().sendRequest('shop:on_deleteCartItem', {onAfterUpdate: Utility.page.init_effects, 
+                                    onclick="return $(this).getForm().sendRequest('shop:on_deleteCartItem', {onAfterUpdate: Page.init_effects, 
                                         update: {'p_shop_cart_partial': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}, 
                                         confirm: 'Do you really want to remove this item from cart?', 
                                         extraFields: {key: '<?= $item->key ?>'}
@@ -134,7 +134,7 @@
                         <label class="label" for="coupon_code">Do you have a coupon?</label>
                         <input type="text" id="coupon_code" value="<?= h($coupon_code) ?>" placeholder="COUPON" name="coupon" 
                             onkeydown="if ((event.keyCode ? event.keyCode : event.which) == 13) $(this).getForm().sendRequest('on_action', {
-                                onAfterUpdate: Utility.page.init_effects, 
+                                onAfterUpdate: Page.init_effects, 
                                 update: {'p_shop_cart_partial': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}
                             })"/>
                     </div>
@@ -143,7 +143,7 @@
                 <!-- Apply Changes -->
                 <a href="#" class="secondary button radius" 
                     onclick="return $(this).getForm().sendRequest('on_action', {
-                        onAfterUpdate: Utility.page.init_effects, 
+                        onAfterUpdate: Page.init_effects, 
                         update: {'p_shop_cart_partial': 'shop:cart_partial', 'mini_cart': 'shop:mini_cart'}
                     })">
                     Apply changes

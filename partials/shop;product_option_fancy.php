@@ -26,7 +26,7 @@
                     <? foreach ($values as $value): ?>        
                         <?
                             $is_current = $posted_value == $value;
-                            $click_handler = "return $(this).getForm().sendRequest('on_action', {onAfterUpdate: Utility.page.init_effects, update: {'product_page': 'shop:product_partial'}, extraFields: { product_options: { '".$option_key."': '".h($value)."' } } })";
+                            $click_handler = "return $(this).getForm().sendRequest('on_action', {onAfterUpdate: Page.init_effects, update: {'product_page': 'shop:product_partial'}, extraFields: { product_options: { '".$option_key."': '".h($value)."' } } })";
                             $posted_options[$option_key] = $value;
                         ?>
                         <tr onclick="<?= $click_handler ?>" class="<?= $is_current ? 'current' : null ?> <?= zebra('special_option') ?>">

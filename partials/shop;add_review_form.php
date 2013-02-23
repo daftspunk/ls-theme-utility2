@@ -1,11 +1,11 @@
 <? if (isset($review_posted)): ?>
     <div class="alert-box success">Your review has been successfully posted.</div>
 <? else: ?>
-    <p id="review_trigger"><a href="#" class="link_button round" onclick="$('#review_trigger').addClass('hidden'); $('#review_form').removeClass('hidden'); $('#review_title').focus(); Utility.page.init_rating_selector(); return false">Write a review</a></p>
+    <p id="review_trigger"><a href="#" class="link_button round" onclick="$('#review_trigger').addClass('hidden'); $('#review_form').removeClass('hidden'); $('#review_title').focus(); Page.init_rating_selector(); return false">Write a review</a></p>
 
     <div id="review_form" class="hidden">
         <h5>Write a review</h5>
-        <?= open_form(array('onsubmit'=>"return $(this).sendRequest('shop:on_addProductReview', {onAfterUpdate: Utility.page.init_effects, extraFields: {no_flash: true}, update:{'product_page': 'shop:product_partial'}})")) ?>
+        <?= open_form(array('onsubmit'=>"return $(this).sendRequest('shop:on_addProductReview', {onAfterUpdate: Page.init_effects, extraFields: {no_flash: true}, update:{'product_page': 'shop:product_partial'}})")) ?>
                 <div class="row">
                     <div class="eight columns">
                         <label for="review_title">Title</label>
