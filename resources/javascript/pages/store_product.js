@@ -29,6 +29,7 @@ var Page = (function(page, $){
     page.init_effects = function() {
         $('#product_images').portfolio('destroy');
         $('#product_images').portfolio({ thumb_mode: 'orbit' });
+        $.fn.foundationClearing ? $(document).foundationClearing() : null;
         page.init_price_calculator();
         refresh_custom_forms();
         $.utility.forms && $(document).forms() && $(document).forms('refresh');
